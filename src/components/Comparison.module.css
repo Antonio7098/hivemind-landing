@@ -1,0 +1,168 @@
+.comparison {
+  padding: var(--space-20) var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+/* Grid table with paired rows */
+.table {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  row-gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+}
+
+.cell {
+  padding: var(--space-3) 0;
+}
+
+/* Column headers */
+.colHeaderOld,
+.colHeaderNew {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.colHeaderOld {
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.colHeaderNew {
+  color: var(--accent-500);
+}
+
+:global([data-theme="cyber"]) .colHeaderNew {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(6,255,192,0.4);
+}
+
+/* Cells */
+.cellOld {
+  text-align: right;
+  padding-right: var(--space-6);
+}
+
+.cellNew {
+  padding-left: var(--space-6);
+}
+
+.strikethrough {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--border-default);
+}
+
+.highlight {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: var(--space-2) var(--space-4);
+  background: var(--comparison-accent-bg);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--comparison-accent-border);
+  display: inline-block;
+}
+
+:global([data-theme="cyber"]) .highlight {
+  border-left-color: var(--accent-400);
+  background: rgba(6,255,192,0.06);
+}
+
+/* Vertical divider */
+.dividerCell {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Continuous vertical line behind the divider cells */
+.table .dividerCell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--border-subtle);
+  transform: translateX(-50%);
+}
+
+/* Header divider gets bottom border gap */
+.table > .dividerCell {
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.dividerDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--border-default);
+  position: relative;
+  z-index: 1;
+}
+
+:global([data-theme="cyber"]) .dividerDot {
+  background: var(--accent-400);
+  box-shadow: 0 0 6px rgba(6,255,192,0.4);
+}
+
+@media (max-width: 768px) {
+  .table {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .cellOld {
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .cellNew {
+    padding-left: 0;
+  }
+
+  .dividerCell {
+    display: none;
+  }
+
+  .colHeaderOld {
+    text-align: left;
+    margin-bottom: var(--space-4);
+  }
+
+  .colHeaderNew {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+.vision {
+  padding: var(--space-20) var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.label {
+  margin-bottom: var(--space-6);
+}
+
+.bigHeading {
+  font-family: var(--section-heading-font);
+  font-weight: var(--section-heading-weight);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+:global([data-theme="industrial"]) .bigHeading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+:global([data-theme="cyber"]) .bigHeading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.bigHeadingAccent {
+  color: var(--accent-500);
+  margin-bottom: var(--space-10);
+}
+
+:global([data-theme="cyber"]) .bigHeadingAccent {
+  color: var(--accent-400);
+  text-shadow: 0 0 30px rgba(6,255,192,0.3);
+}
+
+:global([data-theme="ivory"]) .bigHeadingAccent {
+  color: var(--accent-600);
+  font-style: italic;
+}
+
+.lead {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.statements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  padding-left: var(--space-2);
+}
+
+.statement {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.arrow {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-500);
+  flex-shrink: 0;
+}
+
+:global([data-theme="cyber"]) .arrow {
+  color: var(--accent-400);
+  text-shadow: 0 0 12px rgba(6,255,192,0.6);
+}
+
+.text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+:global([data-theme="ivory"]) .text {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tagline strong {
+  color: var(--accent-500);
+  font-weight: 600;
+}
+
+:global([data-theme="cyber"]) .tagline strong {
+  color: var(--accent-400);
+  text-shadow: 0 0 16px rgba(6,255,192,0.4);
+}
+
+:global([data-theme="ivory"]) .tagline strong {
+  color: var(--accent-600);
+}

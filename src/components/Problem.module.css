@@ -1,0 +1,112 @@
+.problem {
+  padding: var(--space-20) var(--space-6);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-12);
+}
+
+.cascade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  margin-bottom: var(--space-12);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lead {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  font-size: 1.0625rem;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface-2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+
+.chip:hover {
+  border-color: var(--card-hover-border);
+  transform: translateX(4px);
+}
+
+.dash {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--comparison-accent-bg);
+  border: 1px solid var(--comparison-accent-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.question:hover {
+  transform: translateX(-4px);
+}
+
+.qMark {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--accent-500);
+  flex-shrink: 0;
+}
+
+:global([data-theme="cyber"]) .qMark {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(6,255,192,0.5);
+}
+
+:global([data-theme="cyber"]) .question {
+  border-color: rgba(6,255,192,0.15);
+  background: rgba(6,255,192,0.04);
+}
+
+.punchline {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--text-secondary);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.punchline strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .cascade {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}

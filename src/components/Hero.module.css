@@ -1,0 +1,272 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20) var(--space-6);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 720px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  margin-bottom: var(--space-10);
+  animation: fade-in 0.8s var(--ease-out) both;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-500);
+  animation: pulse-glow 2s ease-in-out infinite;
+  color: var(--accent-500);
+}
+
+:global([data-theme="cyber"]) .badgeDot {
+  background: var(--accent-400);
+  color: var(--accent-400);
+}
+
+.title {
+  font-family: var(--hero-title-font);
+  font-size: var(--hero-title-size);
+  font-weight: var(--hero-title-weight);
+  letter-spacing: var(--hero-title-tracking);
+  text-transform: var(--hero-title-transform);
+  line-height: 1.05;
+  margin-bottom: var(--space-6);
+  animation: fade-up 0.8s var(--ease-out) 0.1s both;
+}
+
+:global([data-theme="cyber"]) .title {
+  background: linear-gradient(135deg, var(--accent-400), var(--accent-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(6,255,192,0.3));
+}
+
+:global([data-theme="ivory"]) .title {
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  animation: fade-up 0.8s var(--ease-out) 0.2s both;
+}
+
+:global([data-theme="ivory"]) .subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto var(--space-8);
+  animation: fade-up 0.8s var(--ease-out) 0.3s both;
+}
+
+.manifesto {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-10);
+  animation: fade-up 0.8s var(--ease-out) 0.4s both;
+}
+
+:global([data-theme="industrial"]) .manifesto {
+  color: var(--accent-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+:global([data-theme="cyber"]) .manifesto {
+  color: var(--accent-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  animation: fade-up 0.8s var(--ease-out) 0.5s both;
+}
+
+/* Honeycomb decoration */
+.honeycomb {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.honeycombRight {
+  width: 280px;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-55%);
+  opacity: 0.32;
+}
+
+.honeycombLeft {
+  width: 200px;
+  left: 2%;
+  bottom: 15%;
+  opacity: 0.22;
+}
+
+.hexCell {
+  stroke: var(--accent-500);
+  stroke-width: 1;
+  fill: none;
+  opacity: 0;
+  animation: hex-appear 0.6s var(--ease-out) both;
+}
+
+@keyframes hex-appear {
+  from {
+    opacity: 0;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  to {
+    opacity: 1;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+  }
+}
+
+:global([data-theme="ivory"]) .hexCell {
+  stroke: var(--accent-600);
+}
+
+:global([data-theme="cyber"]) .hexCell {
+  stroke: var(--accent-400);
+  filter: drop-shadow(0 0 4px rgba(6,255,192,0.3));
+}
+
+:global([data-theme="cyber"]) .honeycombRight {
+  opacity: 0.20;
+}
+
+:global([data-theme="cyber"]) .honeycombLeft {
+  opacity: 0.14;
+}
+
+/* Industrial hero decoration: subtle grid */
+:global([data-theme="industrial"]) .decoration {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.15;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black 20%, transparent 70%);
+}
+
+/* Ivory hero decoration: subtle radial warmth */
+:global([data-theme="ivory"]) .decoration {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 50% 40%, rgba(45,90,61,0.04), transparent);
+}
+
+/* Cyber hero decoration: neon grid */
+:global([data-theme="cyber"]) .decoration {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(6,255,192,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,255,192,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 60%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 60%);
+}
+
+:global([data-theme="cyber"]) .decoration::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6,255,192,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Industrial: amber accent line on hero */
+:global([data-theme="industrial"]) .hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-500), transparent);
+}
+
+@media (max-width: 1100px) {
+  .honeycombRight {
+    width: 240px;
+    right: 1%;
+    opacity: 0.25;
+  }
+
+  .honeycombLeft {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .honeycombRight {
+    display: none;
+  }
+
+  .title {
+    font-size: calc(var(--hero-title-size) * 0.6) !important;
+  }
+
+  .manifesto {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}

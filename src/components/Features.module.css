@@ -1,0 +1,119 @@
+.features {
+  padding: var(--space-20) var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-12);
+}
+
+/* Asymmetric bento: 6 sub-columns for flexible centering */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  gap: var(--space-4);
+}
+
+.card {
+  grid-column: span 2;
+  padding: var(--space-6) var(--space-6);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.card:hover {
+  border-color: var(--card-hover-border);
+  transform: translateY(-2px);
+}
+
+:global([data-theme="cyber"]) .card:hover {
+  border-color: rgba(6,255,192,0.3);
+  box-shadow: 0 0 16px rgba(6,255,192,0.1);
+}
+
+/* Hero cards span 4 sub-columns (2/3 width) */
+.cardHero {
+  grid-column: span 4;
+  padding: var(--space-8) var(--space-8);
+  background: linear-gradient(135deg, var(--card-bg), var(--surface-3));
+  border-color: var(--border-default);
+}
+
+:global([data-theme="cyber"]) .cardHero {
+  background: linear-gradient(135deg, var(--surface-2), rgba(6,255,192,0.03));
+  border-color: rgba(6,255,192,0.2);
+}
+
+.cardHero h3 {
+  font-size: 1.25rem;
+}
+
+.cardHero p {
+  font-size: 0.9375rem;
+}
+
+.cardTop {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.aside {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--accent-500);
+  letter-spacing: 0.04em;
+}
+
+:global([data-theme="ivory"]) .aside {
+  color: var(--accent-600);
+}
+
+:global([data-theme="cyber"]) .aside {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(6,255,192,0.4);
+}
+
+.card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Center the last 2 regular cards */
+.card:nth-child(5) {
+  grid-column: 2 / 4;
+}
+.card:nth-child(6) {
+  grid-column: 4 / 6;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .cardHero,
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    grid-column: span 1;
+  }
+}
