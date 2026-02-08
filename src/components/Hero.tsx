@@ -91,7 +91,7 @@ export default function Hero() {
         </div>
         <div className={styles.cta}>
           <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-          <a href="#how" className="btn btn-secondary">Read the docs</a>
+          <a href="/docs" className="btn btn-secondary">Read the docs</a>
         </div>
       </div>
       <div className={styles.decoration} aria-hidden="true" />

@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import Hero from './components/Hero'
@@ -12,8 +13,9 @@ import Comparison from './components/Comparison'
 import Vision from './components/Vision'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import HivemindDocs from './HivemindDocs'
 
-export default function App() {
+function LandingPage() {
   return (
     <ThemeProvider>
       <ThemeSwitcher />
@@ -32,5 +34,16 @@ export default function App() {
         <Footer />
       </main>
     </ThemeProvider>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/docs/*" element={<HivemindDocs />} />
+        <Route path="/*" element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

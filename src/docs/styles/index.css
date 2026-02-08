@@ -1,0 +1,133 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Hivemind docs theme — dark amber */
+.docs-root {
+  --tw-background: 220 18% 5%;
+  --tw-foreground: 240 5% 96%;
+  --tw-card: 220 16% 10%;
+  --tw-card-foreground: 240 5% 96%;
+  --tw-popover: 220 18% 6%;
+  --tw-popover-foreground: 240 5% 96%;
+  --tw-primary: 38 92% 50%;
+  --tw-primary-foreground: 220 18% 5%;
+  --tw-secondary: 220 16% 13%;
+  --tw-secondary-foreground: 240 5% 96%;
+  --tw-muted: 220 16% 9%;
+  --tw-muted-foreground: 220 10% 55%;
+  --tw-accent: 220 16% 13%;
+  --tw-accent-foreground: 240 5% 96%;
+  --tw-destructive: 0 84% 60%;
+  --tw-destructive-foreground: 240 5% 96%;
+  --tw-border: 220 15% 18%;
+  --tw-input: 220 15% 18%;
+  --tw-ring: 38 92% 50%;
+  --tw-sidebar: 220 18% 7%;
+  --tw-sidebar-foreground: 240 5% 96%;
+  --tw-sidebar-border: 220 15% 18%;
+  --tw-sidebar-accent: 220 16% 13%;
+  --tw-sidebar-accent-foreground: 240 5% 96%;
+  --tw-code: 220 18% 12%;
+  --tw-code-foreground: 240 5% 90%;
+
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: hsl(var(--tw-background));
+  color: hsl(var(--tw-foreground));
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.docs-root * {
+  border-color: hsl(var(--tw-border));
+}
+
+/* Reset browser defaults (preflight is off to protect landing page) */
+.docs-root button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.docs-root kbd {
+  background-color: hsl(var(--tw-background));
+  border-color: hsl(var(--tw-border));
+}
+
+/* No focus rings — clean look */
+.docs-root *:focus,
+.docs-root *:focus-visible {
+  outline: none !important;
+  --tw-ring-offset-shadow: none !important;
+  --tw-ring-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.docs-root .scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--tw-border)) transparent;
+}
+.docs-root .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.docs-root .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.docs-root .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--tw-border));
+  border-radius: 3px;
+}
+
+/* Prose */
+.docs-root .prose { line-height: 1.75; color: hsl(var(--tw-foreground)); }
+.docs-root .prose p { margin-bottom: 1.25rem; }
+.docs-root .prose h1, .docs-root .prose h2, .docs-root .prose h3, .docs-root .prose h4 {
+  margin-top: 2rem; margin-bottom: 1rem; color: hsl(var(--tw-foreground));
+}
+.docs-root .prose pre {
+  margin: 1.5rem 0;
+  background-color: hsl(var(--tw-code)) !important;
+  color: hsl(var(--tw-code-foreground)) !important;
+}
+.docs-root .prose a { color: hsl(var(--tw-primary)); }
+.docs-root .prose a:hover { color: hsl(var(--tw-primary) / 0.8); }
+.docs-root .prose strong { color: hsl(var(--tw-foreground)); }
+.docs-root .prose code {
+  color: hsl(var(--tw-code-foreground));
+  background-color: hsl(var(--tw-code));
+}
+.docs-root .prose blockquote {
+  color: hsl(var(--tw-muted-foreground));
+  border-left-color: hsl(var(--tw-border));
+}
+.docs-root .prose ul, .docs-root .prose ol, .docs-root .prose li,
+.docs-root .prose table, .docs-root .prose thead, .docs-root .prose tbody,
+.docs-root .prose th, .docs-root .prose td { color: hsl(var(--tw-foreground)); }
+
+/* Copy button — blend with page background */
+.docs-root button[aria-label="Copy content"] {
+  background-color: hsl(var(--tw-background)) !important;
+  border: 1px solid hsl(var(--tw-border)) !important;
+  border-radius: 6px;
+}
+.docs-root button[aria-label="Copy content"]:hover {
+  background-color: hsl(var(--tw-secondary)) !important;
+}
+
+/* Search dialog — fix input and overall appearance */
+.docs-root input[type="text"],
+.docs-root input:not([type]) {
+  caret-color: hsl(var(--tw-primary));
+  color: hsl(var(--tw-foreground));
+}
+
+/* Code highlighting */
+.docs-root .hljs { background: transparent !important; }
+.docs-root .hljs-keyword, .docs-root .hljs-selector-tag, .docs-root .hljs-literal,
+.docs-root .hljs-section, .docs-root .hljs-link { color: #c678dd; }
+.docs-root .hljs-string, .docs-root .hljs-title, .docs-root .hljs-name,
+.docs-root .hljs-type, .docs-root .hljs-attribute, .docs-root .hljs-symbol,
+.docs-root .hljs-bullet, .docs-root .hljs-addition, .docs-root .hljs-variable,
+.docs-root .hljs-template-tag, .docs-root .hljs-template-variable { color: #e5c07b; }
+.docs-root .hljs-comment, .docs-root .hljs-quote, .docs-root .hljs-deletion,
+.docs-root .hljs-meta { color: #5c6370; }
+.docs-root .hljs-number { color: #d19a66; }
+.docs-root .hljs-built_in, .docs-root .hljs-class .hljs-title { color: #e6c07b; }
