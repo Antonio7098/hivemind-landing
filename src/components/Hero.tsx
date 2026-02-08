@@ -90,7 +90,7 @@ export default function Hero() {
           <span>No surprise merges.</span>
         </div>
         <div className={styles.cta}>
-          <a href="https://github.com/Antonio7098/hivemind-landing" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           <a href="#how" className="btn btn-secondary">Read the docs</a>
         </div>
       </div>

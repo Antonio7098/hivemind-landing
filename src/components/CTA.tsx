@@ -36,7 +36,7 @@ export default function CTA() {
           If you care about trust, correctness, observability, and real-world workflows — you're already part of the audience.
         </motion.p>
         <motion.div className={styles.buttons} variants={scaleIn}>
-          <a href="https://github.com/Antonio7098/hivemind-landing" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           <a href="#how" className="btn btn-secondary">Read the architecture docs</a>
         </motion.div>
       </div>
