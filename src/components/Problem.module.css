@@ -86,6 +86,11 @@
   background: rgba(249,115,22,0.04);
 }
 
+:global([data-theme="ember"]) .question {
+  border-color: rgba(245,158,11,0.15);
+  background: rgba(245,158,11,0.04);
+}
+
 .qMark {
   font-family: var(--font-mono);
   font-weight: 700;
@@ -102,6 +107,11 @@
 :global([data-theme="signal"]) .qMark {
   color: var(--accent-400);
   text-shadow: 0 0 8px rgba(249,115,22,0.6);
+}
+
+:global([data-theme="ember"]) .qMark {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(245,158,11,0.6);
 }
 
 .punchline {

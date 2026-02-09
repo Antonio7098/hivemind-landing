@@ -76,8 +76,22 @@
   letter-spacing: 0.04em;
 }
 
-:global([data-theme="signal"]) .loud {
+:global([data-theme="ember"]) .emphasis {
+  color: var(--accent-400);
+  text-shadow: 0 0 40px rgba(245,158,11,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+:global([data-theme="signal"]) .loud,
+:global([data-theme="ember"]) .loud {
   animation: signal-flicker 10s ease-in-out infinite;
+}
+
+:global([data-theme="ember"]) .divider {
+  background: var(--accent-400);
+  box-shadow: 0 0 16px rgba(245,158,11,0.5);
+  width: 80px;
 }
 
 @media (max-width: 768px) {

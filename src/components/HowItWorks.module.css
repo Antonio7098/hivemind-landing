@@ -74,6 +74,29 @@
   animation: signal-connector-light 2s linear infinite;
 }
 
+:global([data-theme="ember"]) .connector {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-500) 20%,
+    var(--accent-500) 80%,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(245,158,11,0.3);
+  overflow: hidden;
+}
+
+:global([data-theme="ember"]) .connector::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 40px;
+  height: 6px;
+  background: radial-gradient(ellipse, rgba(245,158,11,0.8), transparent);
+  border-radius: 50%;
+  animation: signal-connector-light 2s linear infinite;
+}
+
 .step {
   display: flex;
   flex-direction: column;
@@ -131,6 +154,16 @@
   box-shadow: 0 0 20px rgba(249,115,22,0.4);
 }
 
+:global([data-theme="ember"]) .stepDot {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 8px rgba(245,158,11,0.15);
+}
+
+:global([data-theme="ember"]) .step:hover .stepDot {
+  background: var(--accent-500);
+  box-shadow: 0 0 20px rgba(245,158,11,0.4);
+}
+
 .stepNum {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
@@ -144,6 +177,10 @@
 }
 
 :global([data-theme="signal"]) .stepNum {
+  color: var(--accent-400);
+}
+
+:global([data-theme="ember"]) .stepNum {
   color: var(--accent-400);
 }
 
@@ -184,6 +221,11 @@
 :global([data-theme="signal"]) .footer {
   color: var(--accent-500);
   text-shadow: 0 0 12px rgba(249,115,22,0.3);
+}
+
+:global([data-theme="ember"]) .footer {
+  color: var(--accent-500);
+  text-shadow: 0 0 12px rgba(245,158,11,0.3);
 }
 
 @media (max-width: 768px) {

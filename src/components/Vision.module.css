@@ -39,6 +39,12 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
+:global([data-theme="ember"]) .bigHeading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
 .bigHeadingAccent {
   color: var(--accent-500);
   margin-bottom: var(--space-10);
@@ -52,6 +58,11 @@
 :global([data-theme="signal"]) .bigHeadingAccent {
   color: var(--accent-400);
   text-shadow: 0 0 30px rgba(249,115,22,0.3);
+}
+
+:global([data-theme="ember"]) .bigHeadingAccent {
+  color: var(--accent-400);
+  text-shadow: 0 0 30px rgba(245,158,11,0.3);
 }
 
 .lead {
@@ -92,6 +103,11 @@
   text-shadow: 0 0 12px rgba(249,115,22,0.6);
 }
 
+:global([data-theme="ember"]) .arrow {
+  color: var(--accent-400);
+  text-shadow: 0 0 12px rgba(245,158,11,0.6);
+}
+
 .text {
   font-size: 1.25rem;
   font-weight: 500;
@@ -119,4 +135,9 @@
 :global([data-theme="signal"]) .tagline strong {
   color: var(--accent-400);
   text-shadow: 0 0 16px rgba(249,115,22,0.4);
+}
+
+:global([data-theme="ember"]) .tagline strong {
+  color: var(--accent-400);
+  text-shadow: 0 0 16px rgba(245,158,11,0.4);
 }

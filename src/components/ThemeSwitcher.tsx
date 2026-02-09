@@ -7,6 +7,7 @@ const themes: { value: StyleType; label: string }[] = [
   { value: 'industrial', label: 'Industrial' },
   { value: 'obsidian', label: 'Obsidian' },
   { value: 'signal', label: 'Signal' },
+  { value: 'ember', label: 'Ember' },
 ]
 
 export default function ThemeSwitcher() {

@@ -37,6 +37,12 @@
   font-size: 1.75rem;
 }
 
+:global([data-theme="ember"]) .heading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.75rem;
+}
+
 .headingAccent {
   color: var(--accent-500);
 }
@@ -49,6 +55,11 @@
 :global([data-theme="signal"]) .headingAccent {
   color: var(--accent-400);
   text-shadow: 0 0 20px rgba(249,115,22,0.4);
+}
+
+:global([data-theme="ember"]) .headingAccent {
+  color: var(--accent-400);
+  text-shadow: 0 0 20px rgba(245,158,11,0.4);
 }
 
 .lead {
@@ -97,6 +108,11 @@
   animation: signal-pulse-border 3s ease-in-out infinite;
 }
 
+:global([data-theme="ember"]) .center {
+  border-color: var(--accent-500);
+  animation: ember-pulse-border 3s ease-in-out infinite;
+}
+
 .centerLabel {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
@@ -142,6 +158,11 @@
   box-shadow: 0 0 6px rgba(249,115,22,0.4);
 }
 
+:global([data-theme="ember"]) .spokeConnector {
+  background: linear-gradient(to bottom, var(--accent-400), transparent);
+  box-shadow: 0 0 6px rgba(245,158,11,0.4);
+}
+
 .pillar {
   padding: var(--space-4) var(--space-6);
   background: var(--card-bg);
@@ -178,6 +199,11 @@
   box-shadow: 0 0 16px rgba(249,115,22,0.2);
 }
 
+:global([data-theme="ember"]) .pillar:hover {
+  border-color: var(--accent-400);
+  box-shadow: 0 0 16px rgba(245,158,11,0.2);
+}
+
 .resolution {
   font-family: var(--font-mono);
   font-size: 1.25rem;
@@ -201,6 +227,13 @@
   letter-spacing: 0.08em;
 }
 
+:global([data-theme="ember"]) .resolution {
+  color: var(--accent-400);
+  text-shadow: 0 0 20px rgba(245,158,11,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 @media (max-width: 768px) {
   .heading {
     font-size: 1.75rem;
@@ -215,6 +248,10 @@
   }
 
   :global([data-theme="signal"]) .heading {
+    font-size: 1.375rem;
+  }
+
+  :global([data-theme="ember"]) .heading {
     font-size: 1.375rem;
   }
 

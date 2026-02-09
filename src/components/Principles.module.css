@@ -51,6 +51,14 @@
   box-shadow: 0 0 16px rgba(249,115,22,0.1);
 }
 
+:global([data-theme="ember"]) .card {
+  animation: ember-pulse-border 4s ease-in-out infinite;
+}
+
+:global([data-theme="ember"]) .card:hover {
+  box-shadow: 0 0 16px rgba(245,158,11,0.1);
+}
+
 /* Large hero card spans 2 rows */
 .cardLarge {
   grid-row: 1 / 3;
@@ -73,6 +81,11 @@
 :global([data-theme="signal"]) .cardLarge {
   border-color: var(--accent-500);
   background: linear-gradient(135deg, var(--surface-2), rgba(249,115,22,0.04));
+}
+
+:global([data-theme="ember"]) .cardLarge {
+  border-color: var(--accent-500);
+  background: linear-gradient(135deg, var(--surface-2), rgba(245,158,11,0.04));
 }
 
 .cardLarge .num {
@@ -106,6 +119,10 @@
 
 :global([data-theme="signal"]) .num {
   color: rgba(249,115,22,0.15);
+}
+
+:global([data-theme="ember"]) .num {
+  color: rgba(245,158,11,0.15);
 }
 
 .card h3 {

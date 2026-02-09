@@ -54,6 +54,12 @@
   box-shadow: inset 3px 0 12px rgba(249,115,22,0.06);
 }
 
+:global([data-theme="ember"]) .yes {
+  border-left-color: rgba(245,158,11,0.30);
+  border-left-width: 3px;
+  box-shadow: inset 3px 0 12px rgba(245,158,11,0.06);
+}
+
 .paneInner {
   max-width: 360px;
   width: 100%;
@@ -96,6 +102,12 @@
 }
 
 :global([data-theme="signal"]) .paneTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.125rem;
+}
+
+:global([data-theme="ember"]) .paneTitle {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 1.125rem;
@@ -149,6 +161,11 @@
 :global([data-theme="signal"]) .checkMark {
   color: var(--accent-400);
   text-shadow: 0 0 8px rgba(249,115,22,0.5);
+}
+
+:global([data-theme="ember"]) .checkMark {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(245,158,11,0.5);
 }
 
 .summary {

@@ -34,6 +34,14 @@
   );
 }
 
+:global([data-theme="ember"]) .bg {
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 60%,
+    rgba(245,158,11,0.06),
+    transparent
+  );
+}
+
 .inner {
   position: relative;
   max-width: 560px;
@@ -68,6 +76,12 @@
   font-size: 2rem;
 }
 
+:global([data-theme="ember"]) .heading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 2rem;
+}
+
 .headingAccent {
   color: var(--accent-500);
 }
@@ -80,6 +94,12 @@
 :global([data-theme="signal"]) .headingAccent {
   color: var(--accent-400);
   text-shadow: 0 0 30px rgba(249,115,22,0.3);
+  animation: signal-flicker 8s ease-in-out infinite;
+}
+
+:global([data-theme="ember"]) .headingAccent {
+  color: var(--accent-400);
+  text-shadow: 0 0 30px rgba(245,158,11,0.3);
   animation: signal-flicker 8s ease-in-out infinite;
 }
 
@@ -109,6 +129,10 @@
   }
 
   :global([data-theme="signal"]) .heading {
+    font-size: 1.5rem;
+  }
+
+  :global([data-theme="ember"]) .heading {
     font-size: 1.5rem;
   }
 

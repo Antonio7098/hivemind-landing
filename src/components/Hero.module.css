@@ -57,6 +57,11 @@
   color: var(--accent-400);
 }
 
+:global([data-theme="ember"]) .badgeDot {
+  background: var(--accent-400);
+  color: var(--accent-400);
+}
+
 .title {
   font-family: var(--hero-title-font);
   font-size: var(--hero-title-size);
@@ -77,6 +82,11 @@
 }
 
 :global([data-theme="signal"]) .title {
+  animation: fade-up 0.8s var(--ease-out) 0.1s both, signal-glitch 6s ease-in-out infinite;
+}
+
+:global([data-theme="ember"]) .title {
+  color: var(--accent-400);
   animation: fade-up 0.8s var(--ease-out) 0.1s both, signal-glitch 6s ease-in-out infinite;
 }
 
@@ -124,6 +134,14 @@
 }
 
 :global([data-theme="signal"]) .manifesto {
+  color: var(--accent-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  animation: fade-up 0.8s var(--ease-out) 0.4s both, signal-flicker 8s ease-in-out infinite;
+}
+
+:global([data-theme="ember"]) .manifesto {
   color: var(--accent-500);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -194,11 +212,26 @@
   animation: hex-appear 0.6s var(--ease-out) both, signal-hex-pulse 3s ease-in-out infinite;
 }
 
+:global([data-theme="ember"]) .hexCell {
+  stroke: var(--accent-500);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 4px rgba(245,158,11,0.3));
+  animation: hex-appear 0.6s var(--ease-out) both, ember-hex-pulse 3s ease-in-out infinite;
+}
+
 :global([data-theme="signal"]) .honeycombRight {
   opacity: 0.40;
 }
 
 :global([data-theme="signal"]) .honeycombLeft {
+  opacity: 0.28;
+}
+
+:global([data-theme="ember"]) .honeycombRight {
+  opacity: 0.40;
+}
+
+:global([data-theme="ember"]) .honeycombLeft {
   opacity: 0.28;
 }
 
@@ -260,6 +293,30 @@
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Ember hero decoration: animated amber grid */
+:global([data-theme="ember"]) .decoration {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,158,11,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,158,11,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 15%, transparent 65%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 15%, transparent 65%);
+}
+
+:global([data-theme="ember"]) .decoration::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
