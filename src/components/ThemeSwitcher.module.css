@@ -15,6 +15,12 @@
   transition: background 0.4s ease, border-color 0.4s ease;
 }
 
+:global([data-theme="obsidian"]) .switcher {
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: var(--glass-highlight), 0 4px 16px rgba(0,0,0,0.3);
+}
+
 .tab {
   position: relative;
   z-index: 2;

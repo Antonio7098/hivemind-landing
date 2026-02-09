@@ -5,8 +5,8 @@ import styles from './ThemeSwitcher.module.css'
 
 const themes: { value: StyleType; label: string }[] = [
   { value: 'industrial', label: 'Industrial' },
-  { value: 'ivory', label: 'Ivory' },
-  { value: 'cyber', label: 'Cyber' },
+  { value: 'obsidian', label: 'Obsidian' },
+  { value: 'signal', label: 'Signal' },
 ]
 
 export default function ThemeSwitcher() {

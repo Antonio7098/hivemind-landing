@@ -28,9 +28,15 @@
   margin: var(--space-8) 0;
 }
 
-:global([data-theme="cyber"]) .divider {
+:global([data-theme="obsidian"]) .divider {
   background: var(--accent-400);
-  box-shadow: 0 0 16px rgba(6,255,192,0.5);
+  box-shadow: 0 0 12px rgba(99,102,241,0.4);
+  width: 80px;
+}
+
+:global([data-theme="signal"]) .divider {
+  background: var(--accent-400);
+  box-shadow: 0 0 16px rgba(249,115,22,0.5);
   width: 80px;
 }
 
@@ -50,30 +56,28 @@
   letter-spacing: -0.02em;
 }
 
-:global([data-theme="ivory"]) .quiet {
-  font-family: var(--font-serif);
-}
-
-:global([data-theme="ivory"]) .loud {
-  font-family: var(--font-serif);
-}
-
-:global([data-theme="ivory"]) .emphasis {
-  color: var(--accent-600);
-  font-style: italic;
-}
-
 :global([data-theme="industrial"]) .emphasis {
   color: var(--accent-500);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-:global([data-theme="cyber"]) .emphasis {
+:global([data-theme="obsidian"]) .emphasis {
   color: var(--accent-400);
-  text-shadow: 0 0 40px rgba(6,255,192,0.3);
+  text-shadow: 0 0 30px rgba(99,102,241,0.3);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+:global([data-theme="signal"]) .emphasis {
+  color: var(--accent-400);
+  text-shadow: 0 0 40px rgba(249,115,22,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+:global([data-theme="signal"]) .loud {
+  animation: signal-flicker 10s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {

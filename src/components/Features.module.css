@@ -32,6 +32,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -39,9 +41,42 @@
   transform: translateY(-2px);
 }
 
-:global([data-theme="cyber"]) .card:hover {
-  border-color: rgba(6,255,192,0.3);
-  box-shadow: 0 0 16px rgba(6,255,192,0.1);
+:global([data-theme="obsidian"]) .card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--glass-highlight);
+}
+
+:global([data-theme="obsidian"]) .card:hover {
+  border-color: rgba(129,140,248,0.25);
+  box-shadow: 0 0 16px rgba(99,102,241,0.1), var(--glass-highlight);
+}
+
+:global([data-theme="signal"]) .card {
+  animation: signal-pulse-border 4s ease-in-out infinite;
+}
+
+/* Hover sweep effect for Signal */
+:global([data-theme="signal"]) .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(249,115,22,0.06), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+:global([data-theme="signal"]) .card:hover::after {
+  animation: signal-sweep 0.6s ease-out forwards;
+  opacity: 1;
+}
+
+:global([data-theme="signal"]) .card:hover {
+  box-shadow: 0 0 16px rgba(249,115,22,0.1);
 }
 
 /* Hero cards span 4 sub-columns (2/3 width) */
@@ -52,9 +87,16 @@
   border-color: var(--border-default);
 }
 
-:global([data-theme="cyber"]) .cardHero {
-  background: linear-gradient(135deg, var(--surface-2), rgba(6,255,192,0.03));
-  border-color: rgba(6,255,192,0.2);
+:global([data-theme="obsidian"]) .cardHero {
+  background: linear-gradient(135deg, rgba(22,25,38,0.5), rgba(99,102,241,0.04));
+  border-color: rgba(129,140,248,0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+:global([data-theme="signal"]) .cardHero {
+  background: linear-gradient(135deg, var(--surface-2), rgba(249,115,22,0.03));
+  border-color: rgba(249,115,22,0.20);
 }
 
 .cardHero h3 {
@@ -83,13 +125,14 @@
   letter-spacing: 0.04em;
 }
 
-:global([data-theme="ivory"]) .aside {
-  color: var(--accent-600);
+:global([data-theme="obsidian"]) .aside {
+  color: var(--accent-400);
+  text-shadow: 0 0 8px rgba(99,102,241,0.4);
 }
 
-:global([data-theme="cyber"]) .aside {
+:global([data-theme="signal"]) .aside {
   color: var(--accent-400);
-  text-shadow: 0 0 8px rgba(6,255,192,0.4);
+  text-shadow: 0 0 8px rgba(249,115,22,0.4);
 }
 
 .card p {

@@ -18,18 +18,18 @@
   pointer-events: none;
 }
 
-:global([data-theme="cyber"]) .bg {
+:global([data-theme="obsidian"]) .bg {
   background: radial-gradient(
     ellipse 60% 50% at 50% 60%,
-    rgba(6,255,192,0.06),
+    rgba(99,102,241,0.06),
     transparent
   );
 }
 
-:global([data-theme="ivory"]) .bg {
+:global([data-theme="signal"]) .bg {
   background: radial-gradient(
     ellipse 60% 50% at 50% 60%,
-    rgba(45,90,61,0.04),
+    rgba(249,115,22,0.06),
     transparent
   );
 }
@@ -56,7 +56,13 @@
   font-size: 2rem;
 }
 
-:global([data-theme="cyber"]) .heading {
+:global([data-theme="obsidian"]) .heading {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 2rem;
+}
+
+:global([data-theme="signal"]) .heading {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 2rem;
@@ -66,14 +72,15 @@
   color: var(--accent-500);
 }
 
-:global([data-theme="cyber"]) .headingAccent {
+:global([data-theme="obsidian"]) .headingAccent {
   color: var(--accent-400);
-  text-shadow: 0 0 30px rgba(6,255,192,0.3);
+  text-shadow: 0 0 30px rgba(99,102,241,0.3);
 }
 
-:global([data-theme="ivory"]) .headingAccent {
-  color: var(--accent-600);
-  font-style: italic;
+:global([data-theme="signal"]) .headingAccent {
+  color: var(--accent-400);
+  text-shadow: 0 0 30px rgba(249,115,22,0.3);
+  animation: signal-flicker 8s ease-in-out infinite;
 }
 
 .desc {
@@ -97,7 +104,11 @@
     font-size: 1.5rem;
   }
 
-  :global([data-theme="cyber"]) .heading {
+  :global([data-theme="obsidian"]) .heading {
+    font-size: 1.5rem;
+  }
+
+  :global([data-theme="signal"]) .heading {
     font-size: 1.5rem;
   }
 

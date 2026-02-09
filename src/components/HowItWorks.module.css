@@ -40,7 +40,7 @@
   z-index: 0;
 }
 
-:global([data-theme="cyber"]) .connector {
+:global([data-theme="obsidian"]) .connector {
   background: linear-gradient(
     90deg,
     transparent,
@@ -48,7 +48,30 @@
     var(--accent-400) 80%,
     transparent
   );
-  box-shadow: 0 0 8px rgba(6,255,192,0.3);
+  box-shadow: 0 0 8px rgba(99,102,241,0.3);
+}
+
+:global([data-theme="signal"]) .connector {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-500) 20%,
+    var(--accent-500) 80%,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(249,115,22,0.3);
+  overflow: hidden;
+}
+
+:global([data-theme="signal"]) .connector::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 40px;
+  height: 6px;
+  background: radial-gradient(ellipse, rgba(249,115,22,0.8), transparent);
+  border-radius: 50%;
+  animation: signal-connector-light 2s linear infinite;
 }
 
 .step {
@@ -85,18 +108,27 @@
   color: var(--btn-primary-text);
 }
 
-:global([data-theme="cyber"]) .stepDot {
+:global([data-theme="obsidian"]) .stepDot {
   border-color: var(--accent-400);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  box-shadow: var(--glass-highlight);
 }
 
-:global([data-theme="cyber"]) .step:hover .stepDot {
-  background: var(--accent-400);
-  box-shadow: 0 0 20px rgba(6,255,192,0.4);
+:global([data-theme="obsidian"]) .step:hover .stepDot {
+  background: var(--accent-500);
+  box-shadow: 0 0 20px rgba(99,102,241,0.4);
 }
 
-:global([data-theme="ivory"]) .stepDot {
-  background: var(--surface-2);
-  box-shadow: var(--shadow-sm);
+:global([data-theme="signal"]) .stepDot {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 8px rgba(249,115,22,0.15);
+}
+
+:global([data-theme="signal"]) .step:hover .stepDot {
+  background: var(--accent-500);
+  box-shadow: 0 0 20px rgba(249,115,22,0.4);
 }
 
 .stepNum {
@@ -107,7 +139,11 @@
   transition: color var(--duration-fast) var(--ease-out);
 }
 
-:global([data-theme="cyber"]) .stepNum {
+:global([data-theme="obsidian"]) .stepNum {
+  color: var(--accent-400);
+}
+
+:global([data-theme="signal"]) .stepNum {
   color: var(--accent-400);
 }
 
@@ -140,9 +176,14 @@
   letter-spacing: 0.02em;
 }
 
-:global([data-theme="cyber"]) .footer {
+:global([data-theme="obsidian"]) .footer {
   color: var(--accent-500);
-  text-shadow: 0 0 12px rgba(6,255,192,0.3);
+  text-shadow: 0 0 12px rgba(99,102,241,0.3);
+}
+
+:global([data-theme="signal"]) .footer {
+  color: var(--accent-500);
+  text-shadow: 0 0 12px rgba(249,115,22,0.3);
 }
 
 @media (max-width: 768px) {

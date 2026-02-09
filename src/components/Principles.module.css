@@ -33,8 +33,22 @@
   transform: translateY(-2px);
 }
 
-:global([data-theme="cyber"]) .card:hover {
-  box-shadow: inset 0 1px 0 rgba(6,255,192,0.15), var(--shadow-md);
+:global([data-theme="obsidian"]) .card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--glass-highlight);
+}
+
+:global([data-theme="obsidian"]) .card:hover {
+  box-shadow: var(--glass-highlight), var(--shadow-md);
+}
+
+:global([data-theme="signal"]) .card {
+  animation: signal-pulse-border 4s ease-in-out infinite;
+}
+
+:global([data-theme="signal"]) .card:hover {
+  box-shadow: 0 0 16px rgba(249,115,22,0.1);
 }
 
 /* Large hero card spans 2 rows */
@@ -48,13 +62,17 @@
   border-color: var(--accent-500);
 }
 
-:global([data-theme="cyber"]) .cardLarge {
+:global([data-theme="obsidian"]) .cardLarge {
   border-color: var(--accent-400);
-  background: linear-gradient(135deg, var(--surface-2), rgba(6,255,192,0.04));
+  background: linear-gradient(135deg, rgba(22,25,38,0.6), rgba(99,102,241,0.06));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--glass-highlight);
 }
 
-:global([data-theme="ivory"]) .cardLarge {
-  background: linear-gradient(135deg, var(--surface-2), var(--surface-0));
+:global([data-theme="signal"]) .cardLarge {
+  border-color: var(--accent-500);
+  background: linear-gradient(135deg, var(--surface-2), rgba(249,115,22,0.04));
 }
 
 .cardLarge .num {
@@ -65,11 +83,6 @@
 .cardLarge h3 {
   font-size: 1.5rem;
   margin-bottom: var(--space-4);
-}
-
-:global([data-theme="ivory"]) .cardLarge h3 {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
 }
 
 .cardLarge p {
@@ -87,24 +100,18 @@
   letter-spacing: -0.02em;
 }
 
-:global([data-theme="cyber"]) .num {
-  color: rgba(6,255,192,0.15);
+:global([data-theme="obsidian"]) .num {
+  color: rgba(129,140,248,0.15);
 }
 
-:global([data-theme="ivory"]) .num {
-  font-family: var(--font-serif);
-  color: var(--border-subtle);
+:global([data-theme="signal"]) .num {
+  color: rgba(249,115,22,0.15);
 }
 
 .card h3 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: var(--space-3);
-}
-
-:global([data-theme="ivory"]) .card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
 }
 
 .card p {

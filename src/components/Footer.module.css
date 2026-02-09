@@ -23,19 +23,20 @@
   font-style: italic;
 }
 
-:global([data-theme="ivory"]) .italic {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-}
-
 .rule {
   width: 40px;
   height: 1px;
   background: var(--border-subtle);
 }
 
-:global([data-theme="cyber"]) .rule {
+:global([data-theme="obsidian"]) .rule {
   background: var(--accent-400);
-  box-shadow: 0 0 8px rgba(6,255,192,0.3);
+  box-shadow: 0 0 8px rgba(99,102,241,0.3);
+  width: 60px;
+}
+
+:global([data-theme="signal"]) .rule {
+  background: var(--accent-400);
+  box-shadow: 0 0 8px rgba(249,115,22,0.3);
   width: 60px;
 }
