@@ -16,24 +16,39 @@ const config: DocsConfig = {
   logo: { text: 'Hivemind Docs' },
   navigation: [
     {
-      title: 'Getting Started',
+      title: 'Overview',
       children: [
-        { title: 'Installation', href: '/docs/getting-started/installation' },
-        { title: 'Quick Start', href: '/docs/getting-started/quickstart' },
+        { title: 'Product Requirements', href: '/docs/overview/prd' },
+        { title: 'Core Principles', href: '/docs/overview/principles' },
+        { title: 'Quickstart Guide', href: '/docs/overview/quickstart' },
+        { title: 'Vision', href: '/docs/overview/vision' },
       ],
     },
     {
       title: 'Architecture',
       children: [
-        { title: 'Overview', href: '/docs/architecture/overview' },
-        { title: 'TaskFlows', href: '/docs/architecture/taskflows' },
+        { title: 'Architecture Overview', href: '/docs/architecture/architecture' },
+        { title: 'CLI Capabilities', href: '/docs/architecture/cli-capabilities' },
+        { title: 'Commit & Branch Model', href: '/docs/architecture/commit-branch-model' },
+        { title: 'Event Model', href: '/docs/architecture/event-model' },
+        { title: 'PRD v0', href: '/docs/architecture/prd-v0' },
+        { title: 'Runtime Adapters', href: '/docs/architecture/runtime-adapters' },
+        { title: 'Scope Model', href: '/docs/architecture/scope-model' },
+        { title: 'State Model', href: '/docs/architecture/state-model' },
+        { title: 'TaskFlow', href: '/docs/architecture/taskflow' },
       ],
     },
     {
-      title: 'Guides',
+      title: 'Design',
       children: [
-        { title: 'Working with Agents', href: '/docs/guides/agents' },
-        { title: 'Safety & Observability', href: '/docs/guides/safety' },
+        { title: 'CLI Semantics', href: '/docs/design/cli-semantics' },
+        { title: 'Error Model', href: '/docs/design/error-model' },
+        { title: 'Event Replay', href: '/docs/design/event-replay' },
+        { title: 'Multi-Repo Integration', href: '/docs/design/multi-repo' },
+        { title: 'Retry Context', href: '/docs/design/retry-context' },
+        { title: 'Runtime Wrapper', href: '/docs/design/runtime-wrapper' },
+        { title: 'Scope Enforcement', href: '/docs/design/scope-enforcement' },
+        { title: 'Verification Authority', href: '/docs/design/verification-authority' },
       ],
     },
   ],
@@ -56,19 +71,19 @@ export default function HivemindDocs() {
         homePage={{
           features: [
             {
+              title: 'Architecture',
+              description: 'System architecture and core concepts',
+              href: '/docs/architecture/architecture',
+            },
+            {
               title: 'TaskFlows',
               description: 'Deterministic execution plans for agent orchestration',
-              href: '/docs/architecture/taskflows',
+              href: '/docs/architecture/taskflow',
             },
             {
-              title: 'Agent Isolation',
-              description: 'Scoped environments with file locks and read boundaries',
-              href: '/docs/guides/agents',
-            },
-            {
-              title: 'Safety First',
-              description: 'Event streams, approval gates, bounded retries, and rollback',
-              href: '/docs/guides/safety',
+              title: 'CLI Capabilities',
+              description: 'Command-line interface and capabilities',
+              href: '/docs/architecture/cli-capabilities',
             },
           ],
         }}
