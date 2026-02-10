@@ -228,6 +228,37 @@
   text-shadow: 0 0 12px rgba(245,158,11,0.3);
 }
 
+/* Industrial theme: use signal accent color for boxes and dots */
+:global([data-theme="industrial"]) .connector {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-400) 20%,
+    var(--accent-400) 80%,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(251,191,36,0.3);
+}
+
+:global([data-theme="industrial"]) .stepDot {
+  border-color: var(--accent-400);
+  box-shadow: 0 0 8px rgba(251,191,36,0.15);
+}
+
+:global([data-theme="industrial"]) .step:hover .stepDot {
+  background: var(--accent-400);
+  box-shadow: 0 0 20px rgba(251,191,36,0.4);
+}
+
+:global([data-theme="industrial"]) .stepNum {
+  color: var(--accent-400);
+}
+
+:global([data-theme="industrial"]) .footer {
+  color: var(--accent-400);
+  text-shadow: 0 0 12px rgba(251,191,36,0.3);
+}
+
 @media (max-width: 768px) {
   .timeline {
     grid-template-columns: 1fr;
