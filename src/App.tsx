@@ -3,6 +3,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 
 // Final page components (now the default)
 import FinalHero from './final/Hero'
+import FinalHeroDetail from './final/HeroDetail'
 import FinalSubhero from './final/Subhero'
 import FinalProblem from './final/Problem'
 import FinalInsight from './final/Insight'
@@ -23,6 +24,7 @@ function FinalLandingPage() {
     <ThemeProvider>
       <main data-theme="industrial">
         <FinalHero />
+        <FinalHeroDetail />
         <FinalSubhero />
         <FinalProblem />
         <FinalInsight />

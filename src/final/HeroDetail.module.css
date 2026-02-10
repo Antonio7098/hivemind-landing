@@ -1,0 +1,85 @@
+.heroDetail {
+  padding: var(--space-16) var(--space-6);
+  background: var(--surface-0);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  margin-bottom: var(--space-10);
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.description strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.manifesto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-8);
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.manifestoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.manifestoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-500);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.manifestoDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.manifestoDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .heroDetail {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .manifesto {
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .manifestoDivider {
+    width: 60px;
+    height: 1px;
+  }
+}

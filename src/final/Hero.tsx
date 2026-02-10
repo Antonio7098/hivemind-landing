@@ -1,4 +1,3 @@
-import { useTheme } from '../contexts/ThemeContext'
 import styles from './Hero.module.css'
 
 /* Flat-top hexagon path for a cell of given size centered at (cx, cy) */
@@ -45,12 +44,9 @@ const mobileCells: [number, number][] = [
 ]
 
 export default function Hero() {
-  const { style } = useTheme()
   const rightPaths = honeycombPaths(0, 0, 28, rightCells)
   const leftPaths = honeycombPaths(0, 0, 24, leftCells)
   const mobilePaths = honeycombPaths(0, 0, 22, mobileCells)
-
-  const isFiltered = style === 'filtered'
 
   return (
     <section className={styles.hero}>
@@ -102,29 +98,13 @@ export default function Hero() {
       </svg>
 
       <div className={styles.inner}>
-        <div className={styles.badge}>
-          <span className={styles.badgeDot} />
-          <span>Under active development</span>
-        </div>
         <h1 className={styles.title}>Hivemind</h1>
         <p className={styles.subtitle}>
           Scale agent autonomy — without losing control.
         </p>
         <p className={styles.description}>
-          A local-first orchestration system for AI agents working on real codebases.
-          Built for <strong>deterministic execution</strong>, <strong>full observability</strong>, <strong>reversibility</strong>, and <strong>human authority</strong> at every critical boundary.
+          A local-first control plane for coordinating AI agents on real codebases.
         </p>
-        <div className={styles.manifesto}>
-          <span>Everything observable.</span>
-          <span>Everything deterministic.</span>
-          <span>Everything reversible.</span>
-        </div>
-        {isFiltered && (
-          <p className={styles.killerLine}>
-            Hivemind is not about generating code faster.
-            It's about making agentic work safe, inspectable, and governable.
-          </p>
-        )}
         <div className={styles.cta}>
           <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           <a href="/docs" className="btn btn-secondary">Read the docs</a>
