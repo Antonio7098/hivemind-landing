@@ -51,17 +51,20 @@
   box-shadow: 0 0 16px rgba(249,115,22,0.1);
 }
 
-/* Industrial theme: use signal accent color for boxes */
+/* Industrial theme: use signal accent color for boxes - no borders */
 :global([data-theme="industrial"]) .card {
-  border-color: var(--accent-400);
+  background: linear-gradient(135deg, var(--surface-2), rgba(251,191,36,0.04));
+  border: none;
 }
 
 :global([data-theme="industrial"]) .card:hover {
   box-shadow: 0 0 16px rgba(251,191,36,0.15);
+  transform: translateY(-2px);
 }
 
 :global([data-theme="industrial"]) .cardLarge {
-  border-color: var(--accent-400);
+  background: linear-gradient(135deg, var(--surface-2), rgba(251,191,36,0.06));
+  border: none;
 }
 
 :global([data-theme="industrial"]) .num {
