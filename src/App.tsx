@@ -1,39 +1,41 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
-import ThemeSwitcher from './components/ThemeSwitcher'
-import Hero from './components/Hero'
-import TargetAudience from './components/TargetAudience'
-import Subhero from './components/Subhero'
-import Problem from './components/Problem'
-import Insight from './components/Insight'
-import WhatIs from './components/WhatIs'
-import Principles from './components/Principles'
-import HowItWorks from './components/HowItWorks'
-import Features from './components/Features'
-import Comparison from './components/Comparison'
-import Vision from './components/Vision'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
+
+// Final page components (now the default)
+import FinalHero from './final/Hero'
+import FinalSubhero from './final/Subhero'
+import FinalProblem from './final/Problem'
+import FinalInsight from './final/Insight'
+import FinalCoreMessage from './final/CoreMessage'
+import FinalWhatIs from './final/WhatIs'
+import FinalPrinciples from './final/Principles'
+import FinalHowItWorks from './final/HowItWorks'
+import FinalFeatures from './final/Features'
+import FinalComparison from './final/Comparison'
+import FinalVision from './final/Vision'
+import FinalCTA from './final/CTA'
+import FinalFAQ from './final/FAQ'
+import FinalFooter from './final/Footer'
 import HivemindDocs from './HivemindDocs'
 
-function LandingPage() {
+function FinalLandingPage() {
   return (
     <ThemeProvider>
-      <ThemeSwitcher />
-      <main>
-        <Hero />
-        <TargetAudience />
-        <Subhero />
-        <Problem />
-        <Insight />
-        <WhatIs />
-        <Principles />
-        <HowItWorks />
-        <Features />
-        <Comparison />
-        <Vision />
-        <CTA />
-        <Footer />
+      <main data-theme="industrial">
+        <FinalHero />
+        <FinalSubhero />
+        <FinalProblem />
+        <FinalInsight />
+        <FinalCoreMessage />
+        <FinalWhatIs />
+        <FinalPrinciples />
+        <FinalHowItWorks />
+        <FinalFeatures />
+        <FinalComparison />
+        <FinalVision />
+        <FinalCTA />
+        <FinalFAQ />
+        <FinalFooter />
       </main>
     </ThemeProvider>
   )
@@ -44,7 +46,12 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/docs/*" element={<HivemindDocs />} />
-        <Route path="/*" element={<LandingPage />} />
+        {/* Theme variations */}
+        <Route path="/industrial" element={<FinalLandingPage />} />
+        <Route path="/signal" element={<FinalLandingPage />} />
+        <Route path="/filtered" element={<FinalLandingPage />} />
+        {/* Default route */}
+        <Route path="/*" element={<FinalLandingPage />} />
       </Routes>
     </BrowserRouter>
   )

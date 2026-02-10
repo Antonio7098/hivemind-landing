@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
 
-export type StyleType = 'industrial' | 'obsidian' | 'signal' | 'ember' | 'filtered'
+export type StyleType = 'industrial' | 'signal' | 'filtered'
 
 interface ThemeContextValue {
   style: StyleType
@@ -9,24 +9,29 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
-const STORAGE_KEY = 'hm-landing-theme'
-const VALID_THEMES: StyleType[] = ['industrial', 'obsidian', 'signal', 'ember', 'filtered']
-
-function getInitialTheme(): StyleType {
-  const saved = localStorage.getItem(STORAGE_KEY)
-  if (saved && VALID_THEMES.includes(saved as StyleType)) {
-    return saved as StyleType
-  }
+function getThemeFromURL(): StyleType {
+  const path = window.location.pathname
+  if (path === '/signal') return 'signal'
+  if (path === '/filtered') return 'filtered'
   return 'industrial'
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [style, setStyle] = useState<StyleType>(getInitialTheme)
+  const [style, setStyle] = useState<StyleType>(getThemeFromURL)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', style)
-    localStorage.setItem(STORAGE_KEY, style)
   }, [style])
+
+  // Listen for URL changes
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setStyle(getThemeFromURL())
+    }
+    
+    window.addEventListener('popstate', handleLocationChange)
+    return () => window.removeEventListener('popstate', handleLocationChange)
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ style, setStyle }}>

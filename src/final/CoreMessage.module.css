@@ -1,0 +1,119 @@
+.coreMessage {
+  padding: var(--space-20) 0;
+  background: linear-gradient(180deg, var(--void) 0%, var(--surface-0) 100%);
+  position: relative;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-12);
+  line-height: 1.2;
+}
+
+.headingAccent {
+  color: var(--accent-500);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.col {
+  padding: var(--space-6);
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.colAccent {
+  background: var(--surface-2);
+  border-color: var(--accent-500);
+  box-shadow: 0 0 20px rgba(245,158,11,0.1);
+}
+
+.colTitle {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+}
+
+.colAccent .colTitle {
+  color: var(--accent-500);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  font-size: 1.125rem;
+  padding: var(--space-2) 0;
+  color: var(--text-primary);
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.colAccent .list li::before {
+  color: var(--accent-500);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dividerLine {
+  width: 2px;
+  height: 100%;
+  min-height: 120px;
+  background: linear-gradient(180deg, transparent, var(--border-default), transparent);
+}
+
+.conclusion {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .divider {
+    display: none;
+  }
+  
+  .heading {
+    font-size: 1.75rem;
+  }
+}

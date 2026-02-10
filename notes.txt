@@ -1,257 +1,502 @@
-## 1. What you’re doing exceptionally well
+## 1. Replacing
 
-Let’s start with the positives, because they matter.
+> *No magic. No black boxes. No surprise merges.*
 
-### ✅ Clear philosophical spine
+You’re right:
 
-Your principles are coherent, non-generic, and consistent:
+* “Surprise merges” is too implementation-specific
+* The trio reads a bit like marketing slogans rather than system principles
 
-* Observability
-* Determinism
-* Human authority
-* Local-first
-* Replaceable intelligence
+You want **high-level invariants**, not symptoms.
 
-This already puts you *above* 90% of AI tooling sites, which are buzzword soup.
+### Better alternatives (pick one set)
 
-### ✅ Strong negative positioning
+#### Option A — invariant-driven (my top recommendation)
 
-Lines like:
+> **No hidden state.**
+> **No implicit execution.**
+> **No irreversible actions.**
 
-> No magic.
-> No black boxes.
-> No surprise merges.
+This maps cleanly to:
 
-and
+* observability
+* determinism
+* reversibility
 
-> Hivemind is not
-> × a chatbot
-> × an IDE replacement
-> × a model host
+#### Option B — autonomy framing
 
-are excellent. Keep them.
+> **Autonomy without opacity.**
+> **Parallelism without chaos.**
+> **Power without loss of control.**
 
-### ✅ You’re speaking to *experienced* engineers
+This directly supports your scaling narrative.
 
-This line in particular is very good:
+#### Option C — execution guarantees
 
-> They work great… until they don’t.
+> **Everything observable.**
+> **Everything deterministic.**
+> **Everything reversible.**
 
-That resonates with people who’ve been burned.
+This is extremely aligned with your architecture and very hard to argue with.
 
----
-
-## 2. The main problem: the “why now?” isn’t sharp enough *early*
-
-Right now, the page **ramps up slowly** into its strongest differentiation.
-
-A first-time visitor skimming the top still might think:
-
-> “Okay… another serious AI dev tool. Maybe a workflow manager?”
-
-You *need* to hit them harder, sooner, with:
-
-> **“This is not for vibe coding.”**
-
-Not as an insult — as a *sorting mechanism*.
+👉 **I recommend Option C**. It’s precise, honest, and system-level.
 
 ---
 
-## 3. How to emphasise “NOT vibe coding” (without saying it awkwardly)
+## 2. Removing “Most AI tools optimise for speed” (you’re right)
 
-You don’t need to use the phrase “vibe coding” everywhere — but you *should* describe it clearly and reject it explicitly.
+You’re absolutely correct to dislike this framing.
 
-### Add a short “Who This Is For / Not For” block EARLY
+They don’t *optimize* for speed — they simply **don’t solve orchestration at scale**.
 
-Right after the hero section, add something like:
+So we should reframe from **value judgement** → **problem definition**.
 
----
-
-### Who Hivemind Is For (and Who It Isn’t)
-
-**Hivemind is for:**
-
-* Engineers running non-trivial changes across real codebases
-* Long-running or parallel agent workflows
-* Situations where failure must be diagnosable and reversible
-* Anyone who needs to *trust* automation, not babysit it
-
-**Hivemind is not for:**
-
-* One-shot prompt → code workflows
-* Exploratory “vibe coding”
-* Auto-merging AI output without review
-* Throwaway demos where correctness doesn’t matter
-
-If someone reads this and thinks “that sounds heavy” — **good**.
-That’s exactly the filter you want.
-
----
-
-## 4. Tighten the hero message (small change, big impact)
-
-Current hero:
-
-> Agentic development you can actually trust.
-
-Good — but abstract.
-
-### Slightly sharper version:
-
-> **Agentic development you can actually trust.**
-> **When correctness matters more than speed.**
-
-or
-
-> **Agentic development you can actually trust.**
-> **For real codebases, real workflows, and real consequences.**
-
-This anchors *why* you exist immediately.
-
----
-
-## 5. Strengthen the contrast with mainstream tools
-
-Your “Most AI coding tools optimize for speed” section is good, but you can make it punchier by making the contrast *visual and blunt*.
-
-### Suggested tweak:
+### Replacement framing
 
 Instead of:
 
 > Most AI coding tools optimize for speed.
+
+Use:
+
+> Most AI coding tools are designed for **interactive, single-agent use**.
+
+And instead of:
+
 > Hivemind optimizes for correctness, safety, and trust.
 
-Try:
+Use:
 
-**Most AI coding tools ask:**
+> Hivemind is designed for **scaling agent autonomy** — safely and predictably.
 
-> “How fast can we generate code?”
-
-**Hivemind asks:**
-
-> “Can you explain, verify, undo, and trust this change?”
-
-This reframes the problem in a way engineers instantly get.
+This is more accurate and more respectful.
 
 ---
 
-## 6. The “Problem” section is strong — but a bit long
+## 3. Adding “Every action is observable AND reversible”
 
-The bullet list is accurate, but you can tighten it to increase punch.
+This is a **great addition** — and it deserves to be said repeatedly, not buried.
 
-For example, instead of listing *everything*, you could group:
+We’ll:
 
-> Today’s AI coding tools:
-> — Modify code opaquely
-> — Hide context and execution state
-> — Break under retries and parallelism
-> — Assume humans will clean up the mess
+* Add it to the hero
+* Make it explicit in the core message
+* Reinforce it in How It Works
 
-This keeps the message crisp without losing meaning.
+This is a strong differentiator that IDE tools *cannot* guarantee at system level.
 
 ---
 
-## 7. Your “Insight” section is excellent — lean into it more
+## 4. Making “ideas flow freely, execution is deterministic” a core principle
 
-This is one of your best lines:
+This is one of your **best conceptual contributions**, and it should be elevated.
 
-> The problem isn’t intelligence — it’s orchestration.
+I’m going to:
 
-That should be **visually dominant**.
+* Turn it into a first-class principle
+* Use it as a bridge between autonomy and control
 
-Consider making it a standalone callout or oversized quote.
+This line is very “Hivemind”:
 
-This is a *thesis statement*. Treat it like one.
+> **Ideas flow freely. Execution must be deterministic, observable, and undoable.**
 
----
-
-## 8. “How It Works” is solid — one small improvement
-
-The flow is clear, but you can emphasise *irreversibility vs reversibility* more.
-
-Add a line like:
-
-> Every step produces artifacts you can inspect, replay, or roll back.
-
-That reinforces your core promise again.
+That stays.
 
 ---
 
-## 9. The differentiation table is good — but rename the column
+## 5. Fixing the “Why not Cursor / Windsurf?” honesty issue
 
-“Typical AI tools” vs “Hivemind” is fine, but slightly generic.
+You’re right again — the earlier version was slightly unfair.
 
-Consider:
+Cursor / Windsurf:
 
-* **Ad-hoc AI coding**
-* **Hivemind**
+* *do* have diffs and undo
+* *do* support worktrees
+* *are* fast and excellent at local iteration
 
-This subtly reinforces that the other side isn’t “competition” — it’s a category you’re deliberately rejecting.
+The **real difference** is:
 
----
+* They operate at the **editor/session level**
+* Hivemind operates at the **system/orchestration level**
+* IDEs scale *humans*
+* Hivemind scales *agents*
 
-## 10. The closing section is philosophically strong, but abstract
+And this is the killer truth you said (which we’ll include):
 
-This line is good:
+> Hivemind often starts slower —
+> but finishes faster, because you spend less time fixing unintended agent behaviour.
+> At scale, it’s faster by parallelisation.
 
-> Hivemind isn’t just agent-friendly. It’s agent-operable.
-
-But you might want to end with something *practical* as well.
-
-For example:
-
-> If you’ve ever asked:
-> *“What exactly did the agent do?”*
-> *“Can I safely undo this?”*
-> *“Can I trust this to run again?”*
->
-> Hivemind is built for you.
-
-This ties the philosophy back to lived experience.
+That’s honest and strong.
 
 ---
 
-## 11. One sentence you should consider adding verbatim
+# FULL REWRITE — ITERATION 2 (INCORPORATING YOUR FEEDBACK)
 
-If you want **one killer line** to kill the vibe-coding confusion, I’d add this somewhere prominent:
-
-> **Hivemind is not about generating code faster.
-> It’s about making agentic work safe, inspectable, and governable.**
-
-That sentence alone clarifies *everything*.
+Below is the **entire landing**, rewritten again with your changes baked in.
 
 ---
 
-## Overall verdict (honest)
+## STATUS
 
-You’re doing **80–85% of this perfectly already**.
+**Under active development**
 
-What you need now is not:
+---
 
-* More features
-* More explanation
-* More cleverness
+## HERO
 
-What you need is:
+### HIVEMIND
 
-* **Earlier filtering**
-* **Sharper contrast**
-* **More “this is NOT for everyone” energy**
+### **Scale agent autonomy — without losing control.**
 
-That will:
+A local-first orchestration system for AI agents working on real codebases.
+Built for **deterministic execution**, **full observability**, **reversibility**, and **human authority** at every critical boundary.
 
-* Attract the right people
-* Repel the wrong ones
-* And make the right audience feel *seen*
+**Everything observable.**
+**Everything deterministic.**
+**Everything reversible.**
 
-If you want, next I can:
+[ View on GitHub ] [ Read the docs ]
 
-* Rewrite just the hero + first 2 sections for maximum clarity
-* Or help you add a short FAQ (“Why not just use Cursor?” etc.)
-* Or do a brutal “skim test” for a 10-second reader
+---
 
-But overall — this is already a very serious, credible landing.
+## CORE POSITIONING
+
+Most AI coding tools are designed for **interactive, single-agent use**.
+
+Hivemind is designed for **scaling agent autonomy** — safely, predictably, and at system level.
+
+Because ideas can flow freely.
+Execution cannot.
+
+---
+
+## THE REAL PROBLEM
+
+### **AI agents are powerful — and dangerous at scale.**
+
+Giving one agent autonomy is easy.
+
+Coordinating **many agents** — across tasks, repositories, retries, and time — is where systems fail.
+
+Today’s AI tools often:
+
+* Hide execution state behind interaction
+* Blur intent with execution
+* Break down under retries or parallelism
+* Leave humans to reconcile unintended changes
+
+When things go wrong, you’re left asking:
+
+* What exactly happened?
+* Why did it happen?
+* Can I undo this safely?
+* Can I trust it to run again?
+
+They work well in isolation.
+They don’t scale cleanly.
+
+---
+
+## THE INSIGHT
+
+### **The problem isn’t intelligence — it’s orchestration.**
+
+Agents don’t fail because they aren’t smart enough.
+
+They fail because autonomy is scaled **without structure**.
+
+At scale, agents need:
+
+* Explicit boundaries
+* Deterministic execution
+* Observable state
+* Reversible actions
+* Human governance
+
+**Hivemind provides the structure that makes autonomy scalable.**
+
+---
+
+## CORE MESSAGE (REFINED)
+
+### **Ideas flow freely. Execution must be deterministic.**
+
+Hivemind separates:
+
+* **Intent** — flexible, exploratory, creative
+* **Execution** — constrained, observable, and undoable
+
+This is how you give agents more autonomy
+**without sacrificing correctness, safety, or trust.**
+
+---
+
+## WHAT IS HIVEMIND?
+
+### **A control plane for agentic development**
+
+Hivemind is **not**:
+
+* a chatbot
+* an IDE replacement
+* a model host
+
+Hivemind **is**:
+
+* a task orchestration system for agents
+* a safety and governance layer over execution
+* an event-driven engine for AI-assisted development
+
+It coordinates agents the way serious systems coordinate services:
+**with plans, state, events, and rules.**
+
+---
+
+## CORE PRINCIPLES
+
+### **Built on non-negotiable principles**
+
+**01 — Observability is truth**
+If it happened, you can see it.
+
+**02 — Explicit structure beats implicit behaviour**
+Nothing is assumed. Everything is declared.
+
+**03 — Reversibility is mandatory**
+Every action can be inspected, replayed, or undone.
+
+**04 — Human authority at critical boundaries**
+Agents execute. Humans decide.
+
+**05 — Local-first, tool-agnostic**
+Your code stays with you. Runtimes are replaceable.
+
+---
+
+## HOW IT WORKS
+
+### **Agent execution, done properly**
+
+**01 — Plan**
+Intent is captured. Execution is constrained.
+Parallelism is explicit.
+
+**02 — Execute**
+Agents run in isolated, scoped environments.
+Every action emits events.
+
+**03 — Verify**
+Automated checks + verifier agents.
+Bounded retries. No runaway loops.
+
+**04 — Review & Merge**
+Clean diffs. Explicit approvals.
+Nothing ships implicitly.
+
+**Everything is observable. Everything is reversible.**
+
+---
+
+## KEY CAPABILITY
+
+### **Parallelism without chaos**
+
+Hivemind coordinates multiple agents:
+
+* Working on the **same repository**
+* Working across **multiple repositories**
+* Running **in parallel** with explicit scopes
+* Merging only when execution is verified and approved
+
+Parallelism is a design goal — not an accident.
+
+---
+
+## KEY FEATURES
+
+### **Designed for real-world development**
+
+**TaskFlows — not prompts**
+Deterministic execution plans instead of ad-hoc interaction.
+
+**Scoped parallel agents**
+Parallelism without stepping on each other.
+
+**Checkpointed execution**
+Incremental commits for diffs, undo, and retries.
+
+**Event-native architecture**
+Pause, resume, replay, debug — by design.
+
+**CLI-first interface**
+The system works headlessly. The UI is a projection.
+
+**Runtime adapters**
+Claude Code, Codex, OpenCode, Gemini — swappable over time.
+
+---
+
+## DIFFERENTIATION
+
+### **How Hivemind is different**
+
+**Interactive AI tools**
+
+* Session-based
+* Human-steered
+* Implicit execution
+* Hard to replay
+
+**Hivemind**
+
+* System-driven
+* Agent-autonomous
+* Explicit execution
+* Fully replayable
+
+---
+
+## FUTURE VISION
+
+### **A system that can improve itself**
+
+Because everything is exposed via the CLI:
+
+* Agents can inspect failures
+* Agents can retry safely
+* Agents can operate Hivemind itself
+
+Hivemind isn’t just agent-friendly.
+**It’s agent-operable.**
+
+---
+
+## CLOSING
+
+**Build with agents.**
+**Scale with structure.**
+**Stay in control.**
+
+Hivemind isn’t an AI that writes code.
+
+It’s the system that makes large-scale agentic work
+**correct, observable, and real.**
+
+---
+
+# FAQ — WHY NOT CURSOR / WINDSURF? (HONEST VERSION)
+
+### **Why not just use Cursor or Windsurf?**
+
+Cursor and Windsurf are excellent **IDE-based AI tools**.
+
+They are optimized for:
+
+* Interactive development
+* Fast local iteration
+* Human-in-the-loop control
+* Single-session workflows
+
+They shine when a human is actively steering.
+
+---
+
+### **What problem do they not solve?**
+
+They do not provide **system-level orchestration** for agents:
+
+* No deterministic, replayable execution model
+* No global notion of task flows
+* No explicit retry semantics
+* No coordination across many autonomous agents
+* No governance layer over long-running or parallel execution
+
+They scale **human productivity**.
+They do not scale **agent autonomy**.
+
+---
+
+### **Are diffs, undo, and worktrees unique to Hivemind?**
+
+No.
+
+Editors already support:
+
+* Diffs
+* Undo
+* Worktrees
+
+Hivemind’s difference is **where those guarantees live**.
+
+In Hivemind:
+
+* Reversibility is a system invariant
+* Diffs are first-class execution artifacts
+* Undo and replay work across tasks, agents, and time
+
+Not just inside an editor session.
+
+---
+
+### **Is Hivemind slower?**
+
+At the start: often, yes.
+
+At the end: almost always, no.
+
+Hivemind:
+
+* Prevents unintended changes
+* Reduces retry thrash
+* Makes failures diagnosable
+* Enables safe parallelisation
+
+At scale, it is faster because you spend less time fixing what agents did wrong — and more time running them in parallel, safely.
+
+---
+
+### **Can I use Cursor or Windsurf alongside Hivemind?**
+
+Yes — but not *inside* Hivemind.
+
+They are IDEs, not CLI tools.
+
+Many teams use:
+
+* IDE tools for exploration
+* Hivemind for structured, autonomous execution
+
+They solve different layers of the problem.
+
+---
+
+### **Is Hivemind for vibe coding?**
+
+No.
+
+Hivemind is for:
+
+* Autonomous agent workflows
+* Parallel execution
+* Multi-repo coordination
+* Situations where mistakes are expensive
+
+If you want fast experimentation with minimal structure, IDE tools are better.
+
+If you want autonomy at scale, Hivemind exists.
+
+---
+
+### **Who is Hivemind for?**
+
+Engineers and teams who ask:
+
+* Can I explain exactly what happened?
+* Can I replay or undo this safely?
+* Can multiple agents run in parallel without chaos?
+* Can I trust this system to run again tomorrow?
+
+If those questions matter, Hivemind is for you.
 
 
-caling agents with structure
-ideas flow freely, tasks execute determenistically
