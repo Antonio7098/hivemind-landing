@@ -1,3 +1,4 @@
+import { Github } from 'lucide-react'
 import styles from './Hero.module.css'
 
 /* Flat-top hexagon path for a cell of given size centered at (cx, cy) */
@@ -106,7 +107,9 @@ export default function Hero() {
           A local-first control plane for coordinating AI agents on real codebases.
         </p>
         <div className={styles.cta}>
-          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+            <Github size={20} />
+          </a>
           <a href="/docs" className="btn btn-secondary">Read the docs</a>
         </div>
       </div>
