@@ -1,7 +1,6 @@
 .whatIs {
   padding: var(--space-20) 0;
   border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
   overflow: hidden;
 }
 

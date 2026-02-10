@@ -98,7 +98,7 @@ export default function Hero() {
         ))}
       </svg>
 
-      <div className={styles.inner}>
+      <div className={styles.heroInner}>
         <h1 className={styles.title}>Hivemind</h1>
         <p className={styles.subtitle}>
           Scale agent autonomy — without losing control.
@@ -107,7 +107,7 @@ export default function Hero() {
           A local-first control plane for coordinating AI agents on real codebases.
         </p>
         <div className={styles.cta}>
-          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+          <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary btn-circular" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
             <Github size={20} />
           </a>
           <a href="/docs" className="btn btn-secondary">Read the docs</a>

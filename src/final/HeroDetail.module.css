@@ -1,8 +1,6 @@
 .heroDetail {
   padding: var(--space-16) var(--space-6);
   background: var(--surface-0);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
 }
 
 .inner {

@@ -5,11 +5,10 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-20) var(--space-6);
-  border-bottom: 1px solid var(--border-subtle);
-  overflow: hidden;
+  overflow: visible;
 }
 
-.inner {
+.heroInner {
   max-width: 720px;
   text-align: center;
   position: relative;

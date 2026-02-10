@@ -487,3 +487,14 @@ main {
     padding: 0 var(--space-4);
   }
 }
+
+/* Circular GitHub button */
+.btn-circular {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+}
