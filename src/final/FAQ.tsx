@@ -36,7 +36,7 @@ Hivemind prevents unintended changes, reduces retry thrash, makes failures diagn
     question: 'Can I use Cursor or Windsurf alongside Hivemind?',
     answer: `Yes — but not inside Hivemind. They are IDEs, not CLI tools.
 
-Many teams use IDE tools for exploration, and Hivemind for structured, autonomous execution. They solve different layers of the problem.`
+You can use IDE tools for exploration, and Hivemind for structured, autonomous execution. They solve different layers of the problem.`
   },
   {
     question: 'Is Hivemind for vibe coding?',
@@ -49,9 +49,13 @@ If you want fast experimentation with minimal structure, IDE tools are better. I
   {
     question: 'Who is Hivemind for?',
     answer: `Engineers and teams who ask:
+
 • Can I explain exactly what happened?
+
 • Can I replay or undo this safely?
+
 • Can multiple agents run in parallel without chaos?
+
 • Can I trust this system to run again tomorrow?
 
 If those questions matter, Hivemind is for you.`
@@ -71,7 +75,7 @@ export default function FAQ() {
       <div className={styles.inner}>
         <motion.div className={styles.header} variants={fadeUp}>
           <span className="section-label">FAQ</span>
-          <h2 className="section-heading">WHY NOT CURSOR / WINDSURF?</h2>
+          <h2 className="section-heading">FREQUENTLY ASKED QUESTIONS</h2>
         </motion.div>
 
         <div className={styles.accordion}>

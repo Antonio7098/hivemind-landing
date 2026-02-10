@@ -13,7 +13,7 @@ const fadeUp = {
 
 const features = [
   { title: 'TaskFlows', aside: 'not prompts', desc: 'Deterministic execution plans instead of ad-hoc interaction.', hero: true },
-  { title: 'Scoped parallel agents', desc: 'Parallelism without stepping on each other.', hero: true },
+  { title: 'Scoped parallel agents', desc: 'Parallelism without stepping on each other.' },
   { title: 'Checkpointed execution', desc: 'Incremental commits for diffs, undo, and retries.' },
   { title: 'Event-native architecture', desc: 'Pause, resume, replay, debug — by design.' },
   { title: 'CLI-first interface', desc: 'The system works headlessly. The UI is a projection.' },

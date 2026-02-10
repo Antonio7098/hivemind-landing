@@ -64,8 +64,7 @@ export default function Problem() {
 
         <div className={styles.cascade}>
           <div className={styles.col}>
-            <motion.p className={styles.lead} variants={slideLeft}>Giving one agent autonomy is easy.</motion.p>
-            <motion.p className={styles.lead} variants={slideLeft}>Coordinating many agents is where systems fail:</motion.p>
+            <motion.p className={styles.lead} variants={slideLeft}>Giving one agent autonomy is easy. Coordinating many agents is where systems fail:</motion.p>
             {problems.map((item, i) => (
               <motion.div
                 key={i}

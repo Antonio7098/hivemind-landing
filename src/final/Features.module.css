@@ -12,17 +12,15 @@
   margin-bottom: var(--space-12);
 }
 
-/* Asymmetric bento: 6 sub-columns for flexible centering */
+/* Clean 3-column grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
 }
 
 .card {
-  grid-column: span 2;
-  padding: var(--space-6) var(--space-6);
+  padding: var(--space-6);
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
@@ -105,10 +103,10 @@
   box-shadow: 0 0 16px rgba(245,158,11,0.1);
 }
 
-/* Hero cards span 4 sub-columns (2/3 width) */
+/* First card spans 2 columns */
 .cardHero {
-  grid-column: span 4;
-  padding: var(--space-8) var(--space-8);
+  grid-column: span 2;
+  padding: var(--space-8);
   background: linear-gradient(135deg, var(--card-bg), var(--surface-3));
   border-color: var(--border-default);
 }
@@ -176,23 +174,13 @@
   line-height: 1.6;
 }
 
-/* Center the last 2 regular cards */
-.card:nth-child(5) {
-  grid-column: 2 / 4;
-}
-.card:nth-child(6) {
-  grid-column: 4 / 6;
-}
-
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
 
   .card,
-  .cardHero,
-  .card:nth-child(5),
-  .card:nth-child(6) {
+  .cardHero {
     grid-column: span 1;
   }
 }
