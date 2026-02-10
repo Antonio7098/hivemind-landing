@@ -143,6 +143,16 @@
   opacity: 0.22;
 }
 
+.honeycombMobile {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.25;
+}
+
 .hexCell {
   stroke: var(--accent-500);
   stroke-width: 1;
@@ -241,8 +251,13 @@
 }
 
 @media (max-width: 768px) {
-  .honeycombRight {
+  .honeycombRight,
+  .honeycombLeft {
     display: none;
+  }
+
+  .honeycombMobile {
+    display: block;
   }
 
   .title {

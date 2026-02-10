@@ -37,10 +37,18 @@ const leftCells: [number, number][] = [
   [1, 2],
 ]
 
+/* Mobile top cluster: horizontal line of hexagons */
+const mobileCells: [number, number][] = [
+  [0, 0], [1, 0], [2, 0], [3, 0], [4, 0],
+  [0, 1], [1, 1], [2, 1], [3, 1],
+  [1, 2], [2, 2],
+]
+
 export default function Hero() {
   const { style } = useTheme()
   const rightPaths = honeycombPaths(0, 0, 28, rightCells)
   const leftPaths = honeycombPaths(0, 0, 24, leftCells)
+  const mobilePaths = honeycombPaths(0, 0, 22, mobileCells)
 
   const isFiltered = style === 'filtered'
 
@@ -74,6 +82,21 @@ export default function Hero() {
             d={d}
             className={styles.hexCell}
             style={{ animationDelay: `${1.2 + i * 0.15}s` }}
+          />
+        ))}
+      </svg>
+      <svg
+        className={`${styles.honeycomb} ${styles.honeycombMobile}`}
+        viewBox="-10 0 220 80"
+        fill="none"
+        aria-hidden="true"
+      >
+        {mobilePaths.map((d, i) => (
+          <path
+            key={i}
+            d={d}
+            className={styles.hexCell}
+            style={{ animationDelay: `${0.5 + i * 0.08}s` }}
           />
         ))}
       </svg>
