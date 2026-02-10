@@ -53,6 +53,7 @@
   line-height: 1.05;
   margin-bottom: var(--space-6);
   animation: fade-up 0.8s var(--ease-out) 0.1s both;
+  color: var(--accent-500);
 }
 
 :global([data-theme="signal"]) .title {
