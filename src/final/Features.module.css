@@ -1,6 +1,7 @@
 .features {
   padding: var(--space-20) var(--space-6);
   border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .inner {

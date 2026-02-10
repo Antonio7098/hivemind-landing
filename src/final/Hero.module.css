@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-20) var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
   overflow: hidden;
 }
 
