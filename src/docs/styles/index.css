@@ -131,3 +131,96 @@
 .docs-root .hljs-meta { color: #5c6370; }
 .docs-root .hljs-number { color: #d19a66; }
 .docs-root .hljs-built_in, .docs-root .hljs-class .hljs-title { color: #e6c07b; }
+
+/* Mobile optimizations */
+@media (max-width: 1023px) {
+  .docs-root .prose {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .docs-root .prose h1 {
+    font-size: 1.75rem;
+  }
+  
+  .docs-root .prose h2 {
+    font-size: 1.5rem;
+  }
+  
+  .docs-root .prose h3 {
+    font-size: 1.25rem;
+  }
+  
+  .docs-root .prose pre {
+    font-size: 0.875rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Mobile sidebar - full width on mobile */
+@media (max-width: 1023px) {
+  .docs-root aside.fixed {
+    width: 85vw !important;
+    max-width: 320px !important;
+  }
+}
+
+/* Mobile content padding */
+@media (max-width: 1023px) {
+  .docs-root main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .docs-root main > div {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Mobile header adjustments */
+@media (max-width: 639px) {
+  .docs-root header .flex.h-14 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+/* Mobile TOC - hide on mobile, show on tablet+ */
+@media (max-width: 1279px) {
+  .docs-root aside.hidden.xl\:block {
+    display: none !important;
+  }
+}
+
+/* Mobile navigation items */
+@media (max-width: 1023px) {
+  .docs-root nav a,
+  .docs-root nav button {
+    padding: 0.625rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Mobile table adjustments */
+@media (max-width: 767px) {
+  .docs-root .prose table {
+    font-size: 0.875rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile footer navigation */
+@media (max-width: 639px) {
+  .docs-root nav.flex.items-center.justify-between {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  .docs-root nav.flex.items-center.justify-between > a {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}

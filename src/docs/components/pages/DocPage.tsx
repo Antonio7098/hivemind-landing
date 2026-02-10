@@ -50,14 +50,14 @@ export function DocPage({
     >
       <article className={cn('min-w-0', className)}>
         {(title || description) && (
-          <header className="mb-8 relative pr-10">
+          <header className="mb-6 sm:mb-8 relative pr-10 sm:pr-12">
             {title && (
-              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
                 {title}
               </h1>
             )}
             {description && (
-              <p className="mt-2 text-lg text-muted-foreground">
+              <p className="mt-2 text-base sm:text-lg text-muted-foreground">
                 {description}
               </p>
             )}

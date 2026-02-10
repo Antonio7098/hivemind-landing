@@ -29,12 +29,12 @@ export function DocsLayout({
         
         <main
           className={cn(
-            'flex-1 min-w-0',
+            'flex-1 min-w-0 lg:pl-0',
             showSidebar
           )}
         >
           <div className={cn(
-            'px-12 py-8',
+            'px-4 py-6 sm:px-6 lg:px-8',
             showToc
               ? 'w-full xl:grid xl:grid-cols-[1fr_200px] xl:gap-8'
               : 'max-w-5xl mx-auto',

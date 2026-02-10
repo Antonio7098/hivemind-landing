@@ -285,10 +285,9 @@ export function Sidebar({ className, docs }: SidebarProps) {
 
       <aside
         className={cn(
-          'fixed top-14 z-40 h-[calc(100vh-3.5rem)] w-72 border-r border-sidebar-border bg-sidebar',
-          'transition-transform duration-300 ease-in-out lg:translate-x-0',
+          'fixed top-14 z-40 h-[calc(100vh-3.5rem)] w-72 sm:w-80 max-w-[85vw] border-r border-sidebar-border bg-sidebar',
+          'transition-transform duration-300 ease-in-out lg:translate-x-0 lg:sticky lg:block',
           sidebarOpen ? 'translate-x-0' : '-translate-x-full',
-          'lg:sticky lg:block',
           className
         )}
       >
