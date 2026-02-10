@@ -3,12 +3,23 @@
    Three variations: Industrial, Signal, Filtered
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Ensure no blank space at top */
+/* Force remove any blank space at top */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 [data-theme="industrial"] main,
 [data-theme="signal"] main,
 [data-theme="filtered"] main {
   padding-top: 0 !important;
   margin-top: 0 !important;
+  border-top: none !important;
 }
 
 /* ─── THEME: INDUSTRIAL (Dark Brutalist with Amber Accents) ─── */
