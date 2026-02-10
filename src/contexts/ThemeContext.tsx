@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
 
-export type StyleType = 'industrial' | 'obsidian' | 'signal' | 'ember'
+export type StyleType = 'industrial' | 'obsidian' | 'signal' | 'ember' | 'filtered'
 
 interface ThemeContextValue {
   style: StyleType
@@ -10,7 +10,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
 const STORAGE_KEY = 'hm-landing-theme'
-const VALID_THEMES: StyleType[] = ['industrial', 'obsidian', 'signal', 'ember']
+const VALID_THEMES: StyleType[] = ['industrial', 'obsidian', 'signal', 'ember', 'filtered']
 
 function getInitialTheme(): StyleType {
   const saved = localStorage.getItem(STORAGE_KEY)

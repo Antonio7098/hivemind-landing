@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './Comparison.module.css'
 
 const container = {
@@ -25,6 +26,10 @@ const rows = [
 ]
 
 export default function Comparison() {
+  const { style } = useTheme()
+  const isFiltered = style === 'filtered'
+  const leftHeader = isFiltered ? 'Ad-hoc AI coding' : 'Typical AI tools'
+
   return (
     <motion.section
       className={styles.comparison}
@@ -41,7 +46,7 @@ export default function Comparison() {
 
         <div className={styles.table}>
           {/* Column headers */}
-          <div className={`${styles.cell} ${styles.colHeaderOld}`}>Typical AI tools</div>
+          <div className={`${styles.cell} ${styles.colHeaderOld}`}>{leftHeader}</div>
           <div className={styles.dividerCell} />
           <div className={`${styles.cell} ${styles.colHeaderNew}`}>Hivemind</div>
 

@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './Problem.module.css'
 
 const container = {
@@ -21,12 +22,19 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' as const } },
 }
 
-const problems = [
+const problemsDefault = [
   'Modify your code in opaque ways',
   'Hide context and reasoning',
   'Break when things go wrong',
   'Collapse under parallelism',
   'Assume you\'ll clean up the mess',
+]
+
+const problemsFiltered = [
+  'Modify code opaquely',
+  'Hide context and execution state',
+  'Break under retries and parallelism',
+  'Assume humans will clean up the mess',
 ]
 
 const questions = [
@@ -37,6 +45,10 @@ const questions = [
 ]
 
 export default function Problem() {
+  const { style } = useTheme()
+  const isFiltered = style === 'filtered'
+  const problems = isFiltered ? problemsFiltered : problemsDefault
+
   return (
     <motion.section
       className={styles.problem}

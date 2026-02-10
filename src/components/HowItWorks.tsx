@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './HowItWorks.module.css'
 
 const container = {
@@ -16,7 +17,14 @@ const stepAnim = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: 'easeOut' as const } },
 }
 
-const steps = [
+const stepsDefault = [
+  { number: '01', title: 'Plan', desc: 'Tasks and dependencies are defined up front. Parallelism is explicit and safe.' },
+  { number: '02', title: 'Execute', desc: 'Agents run in isolated, scoped environments. Every action emits events.' },
+  { number: '03', title: 'Verify', desc: 'Automated checks + verifier agents. Bounded retries — no infinite loops.' },
+  { number: '04', title: 'Review & Merge', desc: 'Clean diffs. Explicit approvals. No surprise commits.' },
+]
+
+const stepsFiltered = [
   { number: '01', title: 'Plan', desc: 'Tasks and dependencies are defined up front. Parallelism is explicit and safe.' },
   { number: '02', title: 'Execute', desc: 'Agents run in isolated, scoped environments. Every action emits events.' },
   { number: '03', title: 'Verify', desc: 'Automated checks + verifier agents. Bounded retries — no infinite loops.' },
@@ -24,6 +32,10 @@ const steps = [
 ]
 
 export default function HowItWorks() {
+  const { style } = useTheme()
+  const isFiltered = style === 'filtered'
+  const steps = isFiltered ? stepsFiltered : stepsDefault
+
   return (
     <motion.section
       className={styles.howItWorks}
@@ -58,7 +70,9 @@ export default function HowItWorks() {
         </div>
 
         <motion.p className={styles.footer} variants={fadeUp}>
-          Everything is inspectable. Everything is reversible.
+          {isFiltered 
+            ? "Every step produces artifacts you can inspect, replay, or roll back."
+            : "Everything is inspectable. Everything is reversible."}
         </motion.p>
       </div>
     </motion.section>

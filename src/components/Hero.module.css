@@ -98,6 +98,24 @@
   animation: fade-up 0.8s var(--ease-out) 0.2s both;
 }
 
+.subtitleAccent {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-top: var(--space-3);
+}
+
+.killerLine {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-500);
+  max-width: 540px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.6;
+  animation: fade-up 0.8s var(--ease-out) 0.45s both;
+}
+
 .description {
   font-size: 1.0625rem;
   line-height: 1.7;

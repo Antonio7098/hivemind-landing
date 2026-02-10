@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './Vision.module.css'
 
 const container = {
@@ -16,13 +17,16 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' as const } },
 }
 
-const items = [
+const itemsDefault = [
   'Agents can inspect failures',
   'Agents can retry safely',
   'Agents can operate Hivemind itself',
 ]
 
 export default function Vision() {
+  const { style } = useTheme()
+  const isFiltered = style === 'filtered'
+
   return (
     <motion.section
       className={styles.vision}
@@ -48,7 +52,7 @@ export default function Vision() {
         </motion.p>
 
         <div className={styles.statements}>
-          {items.map((item, i) => (
+          {itemsDefault.map((item, i) => (
             <motion.div key={i} className={styles.statement} variants={revealLine}>
               <span className={styles.arrow}>&rarr;</span>
               <span className={styles.text}>{item}</span>
@@ -59,6 +63,18 @@ export default function Vision() {
         <motion.p className={styles.tagline} variants={fadeUp}>
           Hivemind isn't just agent-friendly. It's <strong>agent-operable</strong>.
         </motion.p>
+
+        {isFiltered && (
+          <motion.div className={styles.practicalQuestions} variants={fadeUp}>
+            <p className={styles.questionIntro}>If you've ever asked:</p>
+            <ul className={styles.questionList}>
+              <li>"What exactly did the agent do?"</li>
+              <li>"Can I safely undo this?"</li>
+              <li>"Can I trust this to run again?"</li>
+            </ul>
+            <p className={styles.questionConclusion}>Hivemind is built for you.</p>
+          </motion.div>
+        )}
       </div>
     </motion.section>
   )

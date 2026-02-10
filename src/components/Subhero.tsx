@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './Subhero.module.css'
 
 const container = {
@@ -12,6 +13,9 @@ const line = {
 }
 
 export default function Subhero() {
+  const { style } = useTheme()
+  const isFiltered = style === 'filtered'
+
   return (
     <motion.section
       className={styles.subhero}
@@ -21,19 +25,39 @@ export default function Subhero() {
       variants={container}
     >
       <div className={styles.inner}>
-        <motion.p className={styles.quiet} variants={line}>
-          Most AI coding tools
-        </motion.p>
-        <motion.p className={styles.quiet} variants={line}>
-          optimize for speed.
-        </motion.p>
-        <motion.div className={styles.divider} variants={line} />
-        <motion.p className={styles.loud} variants={line}>
-          Hivemind optimizes for
-        </motion.p>
-        <motion.p className={styles.emphasis} variants={line}>
-          correctness, safety, and trust.
-        </motion.p>
+        {isFiltered ? (
+          <>
+            <motion.p className={styles.questionLabel} variants={line}>
+              Most AI coding tools ask:
+            </motion.p>
+            <motion.p className={styles.question} variants={line}>
+              "How fast can we generate code?"
+            </motion.p>
+            <motion.div className={styles.divider} variants={line} />
+            <motion.p className={styles.questionLabel} variants={line}>
+              Hivemind asks:
+            </motion.p>
+            <motion.p className={`${styles.question} ${styles.emphasis}`} variants={line}>
+              "Can you explain, verify, undo, and trust this change?"
+            </motion.p>
+          </>
+        ) : (
+          <>
+            <motion.p className={styles.quiet} variants={line}>
+              Most AI coding tools
+            </motion.p>
+            <motion.p className={styles.quiet} variants={line}>
+              optimize for speed.
+            </motion.p>
+            <motion.div className={styles.divider} variants={line} />
+            <motion.p className={styles.loud} variants={line}>
+              Hivemind optimizes for
+            </motion.p>
+            <motion.p className={styles.emphasis} variants={line}>
+              correctness, safety, and trust.
+            </motion.p>
+          </>
+        )}
       </div>
     </motion.section>
   )

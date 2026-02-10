@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './contexts/ThemeContext'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import Hero from './components/Hero'
+import TargetAudience from './components/TargetAudience'
 import Subhero from './components/Subhero'
 import Problem from './components/Problem'
 import Insight from './components/Insight'
@@ -21,6 +22,7 @@ function LandingPage() {
       <ThemeSwitcher />
       <main>
         <Hero />
+        <TargetAudience />
         <Subhero />
         <Problem />
         <Insight />

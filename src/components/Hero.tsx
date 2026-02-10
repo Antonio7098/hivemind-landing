@@ -1,3 +1,4 @@
+import { useTheme } from '../contexts/ThemeContext'
 import styles from './Hero.module.css'
 
 /* Flat-top hexagon path for a cell of given size centered at (cx, cy) */
@@ -37,8 +38,11 @@ const leftCells: [number, number][] = [
 ]
 
 export default function Hero() {
+  const { style } = useTheme()
   const rightPaths = honeycombPaths(0, 0, 28, rightCells)
   const leftPaths = honeycombPaths(0, 0, 24, leftCells)
+
+  const isFiltered = style === 'filtered'
 
   return (
     <section className={styles.hero}>
@@ -80,7 +84,15 @@ export default function Hero() {
           <span>Under active development</span>
         </div>
         <h1 className={styles.title}>Hivemind</h1>
-        <p className={styles.subtitle}>Agentic development you can actually trust.</p>
+        <p className={styles.subtitle}>
+          Agentic development you can actually trust.
+          {isFiltered && (
+            <>
+              <br />
+              <span className={styles.subtitleAccent}>When correctness matters more than speed.</span>
+            </>
+          )}
+        </p>
         <p className={styles.description}>
           A local-first orchestration system for AI agents that work on real codebases — with full observability, explicit control, and human authority at every critical boundary.
         </p>
@@ -89,6 +101,12 @@ export default function Hero() {
           <span>No black boxes.</span>
           <span>No surprise merges.</span>
         </div>
+        {isFiltered && (
+          <p className={styles.killerLine}>
+            Hivemind is not about generating code faster.
+            It's about making agentic work safe, inspectable, and governable.
+          </p>
+        )}
         <div className={styles.cta}>
           <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           <a href="/docs" className="btn btn-secondary">Read the docs</a>
