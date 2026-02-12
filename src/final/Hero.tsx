@@ -1,5 +1,6 @@
 import { Github } from 'lucide-react'
 import styles from './Hero.module.css'
+import type { CSSProperties } from 'react'
 
 /* Flat-top hexagon path for a cell of given size centered at (cx, cy) */
 function hexPath(cx: number, cy: number, size: number) {
@@ -63,7 +64,7 @@ export default function Hero() {
             key={i}
             d={d}
             className={styles.hexCell}
-            style={{ animationDelay: `${0.8 + i * 0.12}s` }}
+            style={{ '--hex-delay': `${0.8 + i * 0.12}s` } as CSSProperties}
           />
         ))}
       </svg>
@@ -78,7 +79,7 @@ export default function Hero() {
             key={i}
             d={d}
             className={styles.hexCell}
-            style={{ animationDelay: `${1.2 + i * 0.15}s` }}
+            style={{ '--hex-delay': `${1.2 + i * 0.15}s` } as CSSProperties}
           />
         ))}
       </svg>
@@ -93,7 +94,7 @@ export default function Hero() {
             key={i}
             d={d}
             className={styles.hexCell}
-            style={{ animationDelay: `${0.5 + i * 0.08}s` }}
+            style={{ '--hex-delay': `${0.5 + i * 0.08}s` } as CSSProperties}
           />
         ))}
       </svg>
