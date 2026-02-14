@@ -20,13 +20,13 @@ This file is the **map**, not the terrain.
 
 Detailed specifications live elsewhere:
 
-- `docs/architecture/state.md` — persisted state model
-- `docs/architecture/events.md` — event taxonomy and replay guarantees
+- `docs/architecture/state-model.md` — persisted state model
+- `docs/architecture/event-model.md` — event taxonomy and replay guarantees
 - `docs/architecture/taskflow.md` — execution semantics and FSMs
-- `docs/architecture/scope.md` — safety, isolation, and parallelism rules
-- `docs/architecture/commits.md` — execution vs integration commit lifecycle
+- `docs/architecture/scope-model.md` — safety, isolation, and parallelism rules
+- `docs/architecture/commit-branch-model.md` — execution vs integration commit lifecycle
 - `docs/architecture/runtime-adapters.md` — runtime abstraction strategy
-- `docs/interface/cli.md` — authoritative system interface
+- `docs/architecture/cli-capabilities.md` — authoritative system interface
 
 This document intentionally avoids duplicating those details.
 
@@ -108,7 +108,7 @@ Scope is a **first-class safety mechanism**.
 
 Parallel execution decisions, worktree isolation, and retry safety are all derived from explicit scope compatibility rules. Scope violations are fatal to the current attempt and always observable via events.
 
-Detailed scope semantics are defined in `scope.md`.
+Detailed scope semantics are defined in `scope-model.md`.
 
 ---
 
@@ -232,7 +232,7 @@ These artifacts are:
 
 Integration commits are created only via the merge protocol.
 
-The full lifecycle is defined in `commits.md`.
+The full lifecycle is defined in `commit-branch-model.md`.
 
 ---
 
@@ -283,7 +283,7 @@ Hivemind is **event-native**.
 
 The event log is the **single source of truth**.
 
-Detailed models are defined in `state.md` and `events.md`.
+Detailed models are defined in `state-model.md` and `event-model.md`.
 
 ---
 

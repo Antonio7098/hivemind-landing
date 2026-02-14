@@ -394,4 +394,4 @@ Hivemind succeeds if:
 ---
 
 **Hivemind is not an AI that codes.**  
-**It is a system that makes agentic work legible, governable,
+**It is a system that makes agentic work legible, observable, and governable.**

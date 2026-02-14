@@ -304,7 +304,7 @@ This enables:
 - Debugging
 - Historical inspection
 
-See `docs/design/event-replay-semantics.md` for detailed explanation of what can and cannot be reconstructed.
+See `docs/design/event-replay.md` for detailed explanation of what can and cannot be reconstructed.
 
 ---
 

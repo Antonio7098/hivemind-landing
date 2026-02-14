@@ -6,36 +6,39 @@ order: 0
 
 # Welcome to Hivemind
 
-Hivemind is a **local-first orchestration system** for AI agents that work on real codebases — with full observability, explicit control, and human authority at every critical boundary.
+Hivemind is a **local-first orchestration system** for AI agents working on real codebases.
 
-## Core Philosophy
+It is built for teams that need to scale agent autonomy without losing control.
 
-- **Observability is truth** — if it happened, you can see it
-- **Explicit structure beats implicit magic** — nothing is assumed
-- **Human authority at critical boundaries** — agents work fast, humans decide what ships
-- **Local-first, tool-agnostic** — your code stays on your machine
-- **Replaceable intelligence, stable system** — models change, architectures shouldn't break
+**Everything observable.**
+**Everything deterministic.**
+**Everything reversible.**
+
+## What You Get
+
+- Deterministic task planning (`graph`) and execution (`flow`)
+- Scoped, parallel agents with explicit permissions
+- Event-native execution history (`events`) for inspection and replay
+- Explicit verification and merge gates (`verify`, `merge`)
+- Full CLI automation with machine-readable output
 
 ## Quick Start
 
 ```bash
-# Install Hivemind
-npm install -g @hivemind/cli
+# From the Hivemind repository
+cargo build --release
 
-# Initialize in your project
-hivemind init
+# Confirm CLI is available
+./target/release/hivemind version
 
-# Run your first TaskFlow
-hivemind run refactor --scope src/utils
+# Create a project
+./target/release/hivemind project create "demo" --description "My first Hivemind project"
 ```
 
-## Architecture Overview
+For an end-to-end setup (project, tasks, graph, flow, merge), continue with [Quickstart Guide](./overview/quickstart.md).
 
-Hivemind coordinates agents the same way serious systems coordinate services: with **plans**, **state**, **events**, and **rules**.
+## Documentation Structure
 
-| Concept | Description |
-|---------|-------------|
-| **TaskFlows** | Deterministic execution plans — not prompts |
-| **Agents** | Scoped, parallel, isolated workers |
-| **Events** | Every action emits inspectable events |
-| **Checkpoints** | Incremental commits for diffs, undo, retries |
+- `overview/` — product vision, guarantees, principles, and onboarding
+- `architecture/` — system model and core invariants
+- `design/` — operational semantics for advanced usage
