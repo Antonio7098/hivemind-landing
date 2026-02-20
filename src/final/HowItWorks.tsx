@@ -18,17 +18,17 @@ const stepAnim = {
 }
 
 const stepsDefault = [
-  { number: '01', title: 'Plan', desc: 'Intent is captured. Execution is constrained. Parallelism is explicit.' },
-  { number: '02', title: 'Execute', desc: 'Agents run in isolated, scoped environments. Every action emits events.' },
-  { number: '03', title: 'Verify', desc: 'Automated checks + verifier agents. Bounded retries. No runaway loops.' },
-  { number: '04', title: 'Review & Merge', desc: 'Clean diffs. Explicit approvals. Nothing ships implicitly.' },
+  { number: '01', title: 'Plan', desc: 'Intent is captured as structured TaskFlows. Parallelism and scope are explicit.' },
+  { number: '02', title: 'Execute', desc: 'Agents run autonomously in isolated, scoped environments. Every action emits events.' },
+  { number: '03', title: 'Verify', desc: 'Automated checks. Verifier agents. Constitution enforcement. Bounded retries. No runaway loops.' },
+  { number: '04', title: 'Integrate', desc: 'Clean diffs. Atomic merges. Nothing ships implicitly — but not everything needs a human click.' },
 ]
 
 const stepsFiltered = [
-  { number: '01', title: 'Plan', desc: 'Intent is captured. Execution is constrained. Parallelism is explicit.' },
-  { number: '02', title: 'Execute', desc: 'Agents run in isolated, scoped environments. Every action emits events.' },
-  { number: '03', title: 'Verify', desc: 'Automated checks + verifier agents. Bounded retries. No runaway loops.' },
-  { number: '04', title: 'Review & Merge', desc: 'Clean diffs. Explicit approvals. Nothing ships implicitly.' },
+  { number: '01', title: 'Plan', desc: 'Intent is captured as structured TaskFlows. Parallelism and scope are explicit.' },
+  { number: '02', title: 'Execute', desc: 'Agents run autonomously in isolated, scoped environments. Every action emits events.' },
+  { number: '03', title: 'Verify', desc: 'Automated checks. Verifier agents. Constitution enforcement. Bounded retries. No runaway loops.' },
+  { number: '04', title: 'Integrate', desc: 'Clean diffs. Atomic merges. Nothing ships implicitly — but not everything needs a human click.' },
 ]
 
 export default function HowItWorks() {

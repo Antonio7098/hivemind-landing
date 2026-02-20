@@ -21,7 +21,7 @@ const pillars = [
   { label: 'Deterministic execution', angle: -36 },
   { label: 'Observable state', angle: 0 },
   { label: 'Reversible actions', angle: 36 },
-  { label: 'Human governance', angle: 72 },
+  { label: 'Governance at strategic boundaries', angle: 72 },
 ]
 
 export default function Insight() {
@@ -64,7 +64,7 @@ export default function Insight() {
       </div>
 
       <motion.p className={styles.resolution} variants={fadeUp}>
-        <strong>Hivemind provides the structure that makes autonomy scalable.</strong>
+        <strong>Hivemind provides the architecture that makes autonomy scalable.</strong>
       </motion.p>
     </motion.section>
   )

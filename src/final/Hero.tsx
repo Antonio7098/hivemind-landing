@@ -105,7 +105,7 @@ export default function Hero() {
           Scale agent autonomy — without losing control.
         </p>
         <p className={styles.description}>
-          A local-first control plane for coordinating AI agents on real codebases.
+          A local-first control plane for coordinating autonomous AI agents across real codebases.
         </p>
         <div className={styles.cta}>
           <a href="https://github.com/Antonio7098/Hivemind" className="btn btn-primary btn-circular" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">

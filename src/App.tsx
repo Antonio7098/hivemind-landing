@@ -9,6 +9,7 @@ import FinalProblem from './final/Problem'
 import FinalInsight from './final/Insight'
 import FinalCoreMessage from './final/CoreMessage'
 import FinalWhatIs from './final/WhatIs'
+import FinalGovernors from './final/Governors'
 import FinalPrinciples from './final/Principles'
 import FinalHowItWorks from './final/HowItWorks'
 import FinalFeatures from './final/Features'
@@ -30,6 +31,7 @@ function FinalLandingPage() {
         <FinalInsight />
         <FinalCoreMessage />
         <FinalWhatIs />
+        <FinalGovernors />
         <FinalPrinciples />
         <FinalHowItWorks />
         <FinalFeatures />

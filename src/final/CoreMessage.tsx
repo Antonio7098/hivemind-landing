@@ -58,7 +58,7 @@ export default function CoreMessage() {
         </div>
 
         <motion.p className={styles.conclusion} variants={fadeUp}>
-          This is how you give agents more autonomy <strong>without sacrificing correctness, safety, or trust.</strong>
+          This is how you increase agent autonomy <strong>without sacrificing safety, correctness, or trust.</strong>
         </motion.p>
       </div>
     </motion.section>

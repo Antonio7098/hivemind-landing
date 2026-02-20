@@ -19,9 +19,10 @@ const slideIn = {
 
 const rows = [
   ['Session-based', 'System-driven'],
-  ['Human-steered', 'Agent-autonomous'],
-  ['Implicit execution', 'Explicit execution'],
+  ['Human-steered execution', 'Agent-autonomous execution'],
+  ['Implicit state', 'Explicit state'],
   ['Hard to replay', 'Fully replayable'],
+  ['Manual reconciliation', 'Architectural governance'],
 ]
 
 export default function Comparison() {

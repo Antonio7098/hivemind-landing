@@ -14,51 +14,47 @@ const fadeUp = {
 const faqs = [
   {
     question: 'Why not just use Cursor or Windsurf?',
-    answer: `Cursor and Windsurf are excellent IDE-based AI tools. They are optimized for interactive development, fast local iteration, human-in-the-loop control, and single-session workflows. They shine when a human is actively steering.
+    answer: `Cursor and Windsurf are excellent interactive development environments. They optimize for individual productivity, conversational iteration, and IDE-native workflows.
 
-They do not provide system-level orchestration for agents: no deterministic, replayable execution model; no global notion of task flows; no explicit retry semantics; no coordination across many autonomous agents; no governance layer over long-running or parallel execution.
+Hivemind optimizes for multi-agent coordination, deterministic execution, replayability, parallel autonomy, and governance at scale.
 
-They scale human productivity. They do not scale agent autonomy.`
+They are not competitors. They operate at different layers. You can use both.`
   },
   {
     question: 'Are diffs, undo, and worktrees unique to Hivemind?',
-    answer: `No. Editors already support diffs, undo, and worktrees.
+    answer: `No. Modern tools support diffs and undo.
 
-Hivemind's difference is where those guarantees live. In Hivemind: reversibility is a system invariant; diffs are first-class execution artifacts; undo and replay work across tasks, agents, and time — not just inside an editor session.`
+What's different is how Hivemind treats them: as first-class, structured execution artifacts; as part of a deterministic TaskFlow; as replayable system state; as components of autonomous coordination.
+
+It's not about having diffs. It's about making them systemic.`
   },
   {
     question: 'Is Hivemind slower?',
-    answer: `At the start: often, yes. At the end: almost always, no.
+    answer: `At first, yes. Structured systems always feel slower than improvisation.
 
-Hivemind prevents unintended changes, reduces retry thrash, makes failures diagnosable, and enables safe parallelisation. At scale, it is faster because you spend less time fixing what agents did wrong — and more time running them in parallel, safely.`
+But at scale, Hivemind is faster because parallelism is explicit, retry is automated, rollback is trivial, and humans spend less time reconciling unintended changes.
+
+Autonomy without structure slows down over time. Autonomy with structure compounds.`
   },
   {
     question: 'Can I use Cursor or Windsurf alongside Hivemind?',
-    answer: `Yes — but not inside Hivemind. They are IDEs, not CLI tools.
+    answer: `Yes. Interactive tools are excellent for exploration. Hivemind is for coordination, execution, and governance.
 
-You can use IDE tools for exploration, and Hivemind for structured, autonomous execution. They solve different layers of the problem.`
+Think: Explore in IDE. Scale with Hivemind.`
   },
   {
     question: 'Is Hivemind for vibe coding?',
     answer: `No.
 
-Hivemind is for autonomous agent workflows, parallel execution, multi-repo coordination, and situations where mistakes are expensive.
+Hivemind is for teams scaling agent autonomy, multi-repo systems, architectural enforcement, deterministic workflows, and high-assurance environments.
 
-If you want fast experimentation with minimal structure, IDE tools are better. If you want autonomy at scale, Hivemind exists.`
+If you want fast, ad-hoc iteration, interactive tools are great. If you want structured autonomy at system level, that's where Hivemind fits.`
   },
   {
     question: 'Who is Hivemind for?',
-    answer: `Engineers and teams who ask:
+    answer: `Engineers building large codebases, multi-agent systems, infrastructure platforms, safety-critical software, and long-lived systems.
 
-• Can I explain exactly what happened?
-
-• Can I replay or undo this safely?
-
-• Can multiple agents run in parallel without chaos?
-
-• Can I trust this system to run again tomorrow?
-
-If those questions matter, Hivemind is for you.`
+If you care about autonomy, governance, reversibility, observability, and system-level scaling — you are the audience.`
   },
 ]
 

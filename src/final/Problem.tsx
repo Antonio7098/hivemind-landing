@@ -23,17 +23,17 @@ const fadeUp = {
 }
 
 const problemsDefault = [
-  'Hide execution state behind interaction',
-  'Blur intent with execution',
-  'Break down under retries or parallelism',
-  'Leave humans to reconcile unintended changes',
+  'Hide execution behind interaction',
+  'Blur planning with execution',
+  'Collapse under parallelism',
+  'Rely on humans to reconcile unintended drift',
 ]
 
 const problemsFiltered = [
-  'Modify code opaquely',
-  'Hide context and execution state',
-  'Break under retries and parallelism',
-  'Assume humans will clean up the mess',
+  'Hide execution behind interaction',
+  'Blur planning with execution',
+  'Collapse under parallelism',
+  'Rely on humans to reconcile unintended drift',
 ]
 
 const questions = [
@@ -59,12 +59,12 @@ export default function Problem() {
       <div className={styles.inner}>
         <motion.div className={styles.header} variants={fadeUp}>
           <span className="section-label">The Real Problem</span>
-          <h2 className="section-heading">AI AGENTS ARE POWERFUL — AND DANGEROUS AT SCALE</h2>
+          <h2 className="section-heading">AUTONOMY DOESN'T FAIL. COORDINATION DOES.</h2>
         </motion.div>
 
         <div className={styles.cascade}>
           <div className={styles.col}>
-            <motion.p className={styles.lead} variants={slideLeft}>Giving one agent autonomy is easy. Coordinating many agents is where systems fail because they:</motion.p>
+            <motion.p className={styles.lead} variants={slideLeft}>Giving one agent autonomy is easy. Coordinating many agents across multiple repos, branches, and objectives is where systems break down.</motion.p>
             {problems.map((item, i) => (
               <motion.div
                 key={i}
@@ -79,7 +79,7 @@ export default function Problem() {
           </div>
 
           <div className={styles.col}>
-            <motion.p className={styles.lead} variants={slideRight}>When things go wrong, you're left asking:</motion.p>
+            <motion.p className={styles.lead} variants={slideRight}>When something goes wrong, you're left asking:</motion.p>
             {questions.map((q, i) => (
               <motion.div
                 key={i}
@@ -95,7 +95,7 @@ export default function Problem() {
         </div>
 
         <motion.p className={styles.punchline} variants={fadeUp}>
-          They work well in isolation. <strong>They don't scale cleanly.</strong>
+          AI works well in isolation. <strong>It does not scale cleanly without structure.</strong>
         </motion.p>
       </div>
     </motion.section>

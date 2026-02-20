@@ -18,9 +18,10 @@ const fadeUp = {
 }
 
 const itemsDefault = [
-  'Agents can inspect failures',
-  'Agents can retry safely',
-  'Agents can operate Hivemind itself',
+  'Agents inspect their own failures',
+  'Agents verify each other',
+  'Agents operate the orchestration layer itself',
+  'Humans define strategy, not checkpoints',
 ]
 
 export default function Vision() {
@@ -37,19 +38,12 @@ export default function Vision() {
     >
       <div className={styles.inner}>
         <motion.div className={styles.label} variants={fadeUp}>
-          <span className="section-label">Future Vision</span>
+          <span className="section-label">Future Direction</span>
         </motion.div>
 
         <motion.h2 className={styles.bigHeading} variants={revealLine}>
-          A system that can
+          A system where
         </motion.h2>
-        <motion.h2 className={`${styles.bigHeading} ${styles.bigHeadingAccent}`} variants={revealLine}>
-          improve itself.
-        </motion.h2>
-
-        <motion.p className={styles.lead} variants={fadeUp}>
-          Because everything is exposed via the CLI:
-        </motion.p>
 
         <div className={styles.statements}>
           {itemsDefault.map((item, i) => (
@@ -61,7 +55,7 @@ export default function Vision() {
         </div>
 
         <motion.p className={styles.tagline} variants={fadeUp}>
-          Hivemind isn't just agent-friendly. It's <strong>agent-operable</strong>.
+          Autonomy increases. Governance strengthens. <strong>Speed is preserved. Control is not sacrificed.</strong>
         </motion.p>
 
         {isFiltered && (

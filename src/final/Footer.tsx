@@ -26,7 +26,7 @@ export default function Footer() {
         </motion.p>
         <motion.div className={styles.rule} variants={fadeIn} />
         <motion.p variants={fadeIn}>
-          It's the system that makes large-scale agentic work <strong>correct, observable, and real</strong>.
+          It's the system that makes large-scale autonomous engineering <strong>correct, observable, and governable</strong>.
         </motion.p>
       </div>
     </motion.footer>

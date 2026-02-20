@@ -12,12 +12,12 @@ const fadeUp = {
 }
 
 const features = [
-  { title: 'TaskFlows', aside: 'not prompts', desc: 'Deterministic execution plans instead of ad-hoc interaction.', hero: true },
-  { title: 'Scoped parallel agents', desc: 'Parallelism without stepping on each other.' },
-  { title: 'Checkpointed execution', desc: 'Incremental commits for diffs, undo, and retries.' },
-  { title: 'Event-native architecture', desc: 'Pause, resume, replay, debug — by design.' },
-  { title: 'CLI-first interface', desc: 'The system works headlessly. The UI is a projection.' },
-  { title: 'Runtime adapters', desc: 'Claude Code, Codex, OpenCode, Gemini — swappable over time.' },
+  { title: 'TaskFlows, not prompts', desc: 'Deterministic execution plans instead of ad-hoc interaction.', hero: true },
+  { title: 'Scoped parallel agents', desc: 'Run many agents without stepping on each other.' },
+  { title: 'Checkpointed execution', desc: 'Incremental commits for diffs, replay, and rollback.' },
+  { title: 'Event-native architecture', desc: 'Pause. Resume. Replay. Debug — by design.' },
+  { title: 'CLI-first', desc: 'If it works, it works headlessly. The UI is a projection.' },
+  { title: 'Replaceable runtimes', desc: 'Claude Code. Codex. OpenCode. Gemini. Or native.', hero: false },
 ]
 
 export default function Features() {
@@ -31,7 +31,7 @@ export default function Features() {
     >
       <div className={styles.inner}>
         <motion.div className={styles.header} variants={fadeUp}>
-          <span className="section-label">Key Features</span>
+          <span className="section-label">Designed for System-Level Autonomy</span>
           <h2 className="section-heading">DESIGNED FOR REAL-WORLD DEVELOPMENT</h2>
         </motion.div>
 
@@ -42,10 +42,7 @@ export default function Features() {
               className={`${styles.card} ${f.hero ? styles.cardHero : ''}`}
               variants={fadeUp}
             >
-              <div className={styles.cardTop}>
-                <h3>{f.title}</h3>
-                {f.aside && <span className={styles.aside}>{f.aside}</span>}
-              </div>
+              <h3>{f.title}</h3>
               <p>{f.desc}</p>
             </motion.div>
           ))}

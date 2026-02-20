@@ -23,8 +23,8 @@ export default function HeroDetail() {
       <div className={styles.inner}>
         <motion.div className={styles.content} variants={fadeUp}>
           <p className={styles.description}>
-            A local-first orchestration system for AI agents working on real codebases.
-            Built for <strong>deterministic execution</strong>, <strong>full observability</strong>, <strong>reversibility</strong>, and <strong>human authority</strong> at every critical boundary.
+            AI is no longer the bottleneck. Coordination is.
+            Hivemind is built for a world where agents move fast — and systems must keep up.
           </p>
         </motion.div>
 
@@ -42,6 +42,11 @@ export default function HeroDetail() {
           <div className={styles.manifestoItem}>
             <span className={styles.manifestoLabel}>Reversible</span>
             <span className={styles.manifestoDesc}>Every action can be undone.</span>
+          </div>
+          <div className={styles.manifestoDivider} />
+          <div className={styles.manifestoItem}>
+            <span className={styles.manifestoLabel}>Governance</span>
+            <span className={styles.manifestoDesc}>Without friction.</span>
           </div>
         </motion.div>
       </div>

@@ -27,18 +27,18 @@ export default function Subhero() {
       <div className={styles.inner}>
         {isFiltered ? (
           <>
-            <motion.p className={styles.questionLabel} variants={line}>
-              Most AI coding tools ask:
+            <motion.p className={styles.quiet} variants={line}>
+              Most AI coding tools are designed for
             </motion.p>
-            <motion.p className={styles.question} variants={line}>
-              "How fast can we generate code?"
+            <motion.p className={styles.quiet} variants={line}>
+              interactive, single-agent sessions.
             </motion.p>
             <motion.div className={styles.divider} variants={line} />
-            <motion.p className={styles.questionLabel} variants={line}>
-              Hivemind asks:
+            <motion.p className={styles.loud} variants={line}>
+              Hivemind is designed for
             </motion.p>
-            <motion.p className={`${styles.question} ${styles.emphasis}`} variants={line}>
-              "Can you explain, verify, undo, and trust this change?"
+            <motion.p className={styles.emphasis} variants={line}>
+              Scaling autonomous agents — safely, predictably, and at system level.
             </motion.p>
           </>
         ) : (
@@ -47,14 +47,14 @@ export default function Subhero() {
               Most AI coding tools are designed for
             </motion.p>
             <motion.p className={styles.quiet} variants={line}>
-              interactive, single-agent use.
+              interactive, single-agent sessions.
             </motion.p>
             <motion.div className={styles.divider} variants={line} />
             <motion.p className={styles.loud} variants={line}>
               Hivemind is designed for
             </motion.p>
             <motion.p className={styles.emphasis} variants={line}>
-              Scaling agent autonomy — safely, predictably, and at system level.
+              Scaling autonomous agents — safely, predictably, and at system level.
             </motion.p>
           </>
         )}

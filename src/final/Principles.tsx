@@ -20,7 +20,7 @@ const principles = [
   },
   {
     num: '02',
-    title: 'Explicit structure beats implicit behaviour',
+    title: 'Explicit structure beats implicit behavior',
     desc: 'Nothing is assumed. Everything is declared.',
     size: 'small' as const,
   },
@@ -32,14 +32,14 @@ const principles = [
   },
   {
     num: '04',
-    title: 'Human authority at critical boundaries',
-    desc: 'Agents execute. Humans decide.',
+    title: 'Governance over gating',
+    desc: 'Humans define intent. Systems enforce boundaries.',
     size: 'small' as const,
   },
   {
     num: '05',
-    title: 'Local-first, tool-agnostic',
-    desc: 'Your code stays with you. Runtimes are replaceable.',
+    title: 'Local-first and replaceable',
+    desc: 'Your code stays with you. Models and runtimes can change.',
     size: 'small' as const,
   },
 ]

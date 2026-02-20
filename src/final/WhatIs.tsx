@@ -32,7 +32,7 @@ export default function WhatIs() {
     >
       <motion.div className={styles.header} variants={fadeUp}>
         <span className="section-label">What Is Hivemind?</span>
-        <h2 className="section-heading">A CONTROL PLANE FOR AGENTIC DEVELOPMENT</h2>
+        <h2 className="section-heading">A CONTROL PLANE FOR AGENTIC ENGINEERING</h2>
       </motion.div>
 
       <div className={styles.split}>
@@ -70,15 +70,15 @@ export default function WhatIs() {
             <ul className={styles.list}>
               <li>
                 <span className={styles.checkMark}>&rarr;</span>
-                <span>a task orchestration system for agents</span>
+                <span>A task orchestration system for autonomous agents</span>
               </li>
               <li>
                 <span className={styles.checkMark}>&rarr;</span>
-                <span>a safety and governance layer over execution</span>
+                <span>A governance and safety layer over execution</span>
               </li>
               <li>
                 <span className={styles.checkMark}>&rarr;</span>
-                <span>an event-driven engine for AI-assisted development</span>
+                <span>An event-native engine for large-scale AI coordination</span>
               </li>
             </ul>
           </div>
@@ -86,7 +86,7 @@ export default function WhatIs() {
       </div>
 
       <motion.p className={styles.summary} variants={fadeUp}>
-        It coordinates agents the way serious systems coordinate services: <strong>with plans, state, events, and rules.</strong>
+        It coordinates agents the way distributed systems coordinate services: <strong>with plans, state, events, and rules.</strong>
       </motion.p>
     </motion.section>
   )
